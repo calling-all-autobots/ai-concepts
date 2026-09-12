@@ -1,0 +1,18 @@
+{
+  "last_run": "2026-09-12",
+  "notes": "First run used a 4-week look-back (2026-08-15 .. 2026-09-13). Weekly Mon-Sun from here.",
+  "seen": {
+    "https://www.anthropic.com/news#fable-mythos-5-1": { "date": "2026-09-01", "week": "2026-W36", "title": "Claude Fable 5.1 & Mythos 5.1", "category": "product", "kept": true },
+    "release-notes|ant apply as-code|2026-09-03": { "date": "2026-09-03", "week": "2026-W36", "title": "ant apply — agents/skills/memory as code", "category": "ways-of-working", "kept": true },
+    "release-notes|Managed Agents auto permission mode|2026-09-10": { "date": "2026-09-10", "week": "2026-W37", "title": "Managed Agents auto permission mode", "category": "ways-of-working", "kept": true },
+    "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents": { "date": "2025-09-29", "week": "first-run-foundation", "title": "Effective context engineering for AI agents", "category": "practice", "kept": true },
+    "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents": { "date": "2025-11-26", "week": "first-run-foundation", "title": "Effective harnesses for long-running agents", "category": "practice", "kept": true },
+    "claude-code|v2.1.269|2026-09-11": { "date": "2026-09-11", "week": "2026-W37", "title": "Claude Code v2.1.269 (plugin eval, output-style)", "kept": false, "reason": "point release / tooling polish" },
+    "claude-code|v2.1.268|2026-09-11": { "date": "2026-09-11", "week": "2026-W37", "title": "Claude Code v2.1.268 (agent map, gateway parity)", "kept": false, "reason": "point release" },
+    "claude-code|v2.1.260|2026-09-04": { "date": "2026-09-04", "week": "2026-W36", "title": "Claude Code v2.1.260 (fullscreen diff)", "kept": false, "reason": "point release" },
+    "release-notes|Smart reports beta Enterprise|2026-09-10": { "date": "2026-09-10", "week": "2026-W37", "title": "Smart reports (beta) for Enterprise", "kept": false, "reason": "enterprise admin analytics, not core" },
+    "release-notes|ant beta sessions connect|2026-09-10": { "date": "2026-09-10", "week": "2026-W37", "title": "ant beta:sessions connect CLI", "kept": false, "reason": "dev convenience" },
+    "release-notes|per-message effort GCP|2026-09-03": { "date": "2026-09-03", "week": "2026-W36", "title": "Per-message effort on Google Cloud", "kept": false, "reason": "availability/parity" },
+    "release-notes|commerce agent blueprint|2026-09-02": { "date": "2026-09-02", "week": "2026-W36", "title": "Commerce agent blueprint", "kept": false, "reason": "reference sample, not a capability" }
+  }
+}
