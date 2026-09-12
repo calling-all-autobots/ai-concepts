@@ -1,8 +1,11 @@
-# Anthropic Radar — Backfill: July 2026
+# July 2026 — Monthly Summary
+_Anthropic learning radar · living document · last updated 12/09/2026_
 
-_Historical backfill month (part of the Nov 2025 – Aug 2026 radar sweep). Not a live weekly scan; written retrospectively from official sources._
+**This month:** Opus 5 pushed SWE-bench toward ~96% at unchanged pricing, the MCP 2026-07-28 spec went stateless, and memory moved to categorized mid-conversation entries.
 
-**6 nuggets:** 5 product releases, 1 new best practice.
+_A living monthly newsletter — re-swept and rewritten whenever new material lands in this month's folder._
+
+---
 
 ## ① Product releases
 - [Claude Opus 5](02-product-claude-opus-5.md) — frontier model at unchanged $5/$25 Opus pricing, 1M context, thinking on by default.

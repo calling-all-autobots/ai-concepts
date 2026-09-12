@@ -1,8 +1,11 @@
-# Anthropic Radar — Backfill: November 2025
+# November 2025 — Monthly Summary
+_Anthropic learning radar · living document · last updated 12/09/2026_
 
-_Historical backfill month (part of the Nov 2025 – Aug 2026 radar sweep). Not a live weekly scan; nuggets reconstructed from official sources._
+**This month:** Opus 4.5 set a new coding bar (80.9% SWE-bench) and added the `effort` dial, while the platform learned to fight context bloat — Tool Search Tool, code-execution-with-MCP, and the long-running-agent harness.
 
-**This month: 5 impactful items** (2 product releases, 3 new best practices).
+_A living monthly newsletter — re-swept and rewritten whenever new material lands in this month's folder._
+
+---
 
 ## ① Product releases
 - [Claude Opus 4.5 — first model over 80% on SWE-bench Verified](02-product-claude-opus-4-5.md) — 80.9% SWE-bench at $5/$25 per M, plus an `effort` knob that hits Sonnet-4.5 quality with 76% fewer tokens.

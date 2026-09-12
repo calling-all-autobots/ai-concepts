@@ -14,9 +14,8 @@ verbatim. This file only adds the *orchestration*.
 ## Numbering rule (always)
 
 Every numbered nugget file starts at **`01`** and counts up. **Never use `00`** —
-for any file, ever, including the cross-cutting deprecation nugget or any other
-"special" item. A cross-cutting nugget at the backfill root is simply
-`01-cross-cutting-<slug>.md`.
+for any file, ever. Cross-cutting reference docs (e.g. the model-deprecation
+timeline) live in `learning/reference/` with descriptive names — not `00-`.
 
 ## The core efficiency principle
 
@@ -34,8 +33,9 @@ sparse (~2–5/month). So:
 
 - **Window:** start date … end date (inclusive). Walk months **backward** from
   the end (most recent first) so output arrives newest-first.
-- **Output root:** default `learning/backfill/` with one folder per month
-  (`YYYY-MM_<Month>/`), to keep the sweep separate from the weekly `W..` folders.
+- **Output layout:** `learning/<year>/<MM_Month>/` — one folder per month, with the
+  nuggets directly inside (historical months have no weekly sub-folders). Cross-
+  cutting reference docs go in `learning/reference/`.
 
 ---
 
@@ -72,11 +72,15 @@ Fan out **writer agents, one per month that has kept items** (skip empty months)
 Each writer:
 - receives *only its month's kept list* (title + date + URL + category),
 - **confirms each item against its official source** (one fetch per item),
-- writes one nugget per item to `learning/backfill/<YYYY-MM_Month>/NN-<category>-<slug>.md`
+- writes one nugget per item to `learning/<year>/<MM_Month>/NN-<category>-<slug>.md`
   using the anthropic-radar §5 format and bar (In one line / What actually
-  changed / Why it matters / Your point of view / What to do / Connects to),
-- writes that month's `README.md` digest (3 category sections + a short
-  "context" line noting it's a backfill month),
+  changed / Why it matters / Your point of view / What to do / Connects to).
+  A backfill month nugget is THREE levels below the repo root, so lesson links use
+  `../../../` (e.g. `../../../06-agents/33-mcp.md`),
+- writes that month's `monthly-summary.md` — the living monthly newsletter:
+  `# <Month Year> — Monthly Summary`, a `_last updated dd/mm/yyyy_` line, a
+  `**This month:**` one-line narrative, then the ①②③ sections linking its nuggets
+  with one-line hooks,
 - returns a one-line-per-nugget summary.
 
 Keep writer agents independent — no shared files between them except their own
@@ -85,12 +89,14 @@ month folder. This is what makes the fan-out safe and parallel.
 ## Phase 3 — Aggregation (orchestrator, single writer)
 
 After all writers finish:
-- Write `learning/backfill/README.md` — an index of every month, newest-first,
-  with counts by category and links.
-- Merge every swept item into `learning/.radar-state.json` `seen` (so the ongoing
-  weekly job never re-reports them). This is the **only** place state is written —
-  writers never touch it.
-- Update the top-level `learning/README.md` to link the backfill index.
+- Write the cross-cutting reference nugget(s) yourself (e.g. the model-deprecation
+  timeline) into `learning/reference/` — a doc there is TWO levels below the repo
+  root, so its lesson links use `../../`.
+- Write/refresh the year index `learning/<year>/README.md` (months newest-first)
+  and the top-level `learning/README.md`.
+- Record the swept window in `learning/.radar-state.json` (`swept_ranges`) and merge
+  notable items into `seen` so the weekly job never re-reports them. This is the
+  **only** place state is written — writers never touch it.
 - Commit locally to a branch `radar/sweep-<start>_<end>`. **Do not push** unless
   the user asks. Report the totals (months covered, nuggets by category,
   excluded count).

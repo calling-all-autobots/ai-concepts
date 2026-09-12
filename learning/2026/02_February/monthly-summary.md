@@ -1,8 +1,11 @@
-# Anthropic Radar — Backfill: February 2026
+# February 2026 — Monthly Summary
+_Anthropic learning radar · living document · last updated 12/09/2026_
 
-_Historical backfill month (part of the Nov 2025 → Aug 2026 radar sweep). Not a live weekly scan — reconstructed from official sources._
+**This month:** Two frontier models in one month (Opus 4.6, Sonnet 4.6), automatic prompt caching, Claude Code Remote Control, and parallel-agent engineering coming of age.
 
-**This month: 6 nuggets** — 4 product releases, 1 new best practice, 1 new way of working.
+_A living monthly newsletter — re-swept and rewritten whenever new material lands in this month's folder._
+
+---
 
 ## ① Product releases
 - [Claude Code Remote Control](01-product-claude-code-remote-control.md) — steer a live local coding session from your phone or browser; code and tools stay local.

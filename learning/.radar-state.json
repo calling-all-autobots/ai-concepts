@@ -2,7 +2,7 @@
   "last_run": "2026-09-12",
   "notes": "First run used a 4-week look-back (2026-08-15 .. 2026-09-13). Weekly Mon-Sun from here.",
   "swept_ranges": [
-    { "start": "2025-11-01", "end": "2026-08-31", "via": "radar-sweep", "output": "learning/backfill/", "note": "Backfilled 2026-09-12; the weekly job (forward-only from last_run) must not re-report items dated within this range." }
+    { "start": "2025-11-01", "end": "2026-08-31", "via": "radar-sweep", "output": "learning/2025/ and learning/2026/ (by month)", "note": "Backfilled 2026-09-12; the weekly job (forward-only from last_run) must not re-report items dated within this range." }
   ],
   "seen": {
     "https://www.anthropic.com/news#fable-mythos-5-1": { "date": "2026-09-01", "week": "2026-W36", "title": "Claude Fable 5.1 & Mythos 5.1", "category": "product", "kept": true },

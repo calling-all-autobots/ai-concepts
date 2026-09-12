@@ -1,8 +1,11 @@
-# Anthropic Radar — Backfill: June 2026
+# June 2026 — Monthly Summary
+_Anthropic learning radar · living document · last updated 12/09/2026_
 
-_Historical backfill month (part of the Nov 2025 → Aug 2026 radar sweep). Not a live weekly scan._
+**This month:** Sonnet 5 cut the price of near-frontier work (watch the tokenizer inflation), Fable 5 & Mythos 5 opened the Mythos-class line, and MCP tunnels + REPL persistence deepened the agent stack.
 
-**7 nuggets** — all Product releases. A model-heavy month: two new model lines (Sonnet 5; Fable 5 / Mythos 5), two new surfaces (Claude Science, Claude Tag), and three platform changes (rate-limit tiers, MCP Tunnels API, code-execution REPL persistence). Note: Sonnet 4 & Opus 4 retirements from this window are folded into the central "Model deprecation timeline" nugget, not repeated here.
+_A living monthly newsletter — re-swept and rewritten whenever new material lands in this month's folder._
+
+---
 
 ## ① Product releases
 - [Claude Sonnet 5](01-product-claude-sonnet-5.md) — cheaper on paper ($2/$10), but a new tokenizer inflates the same text ~30%, eating much of the discount.

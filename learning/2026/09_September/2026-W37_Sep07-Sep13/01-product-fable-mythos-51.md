@@ -31,4 +31,4 @@ The story of 5.1 is **the cost curve, not the capability curve.** A 75% cache-re
 4. If you spin up a **new API account**, note that manual context editing is off (anti-distillation) — design around it rather than being surprised.
 
 ## Connects to
-[Prompt caching](../../05-prompting/31-prompt-caching.md) · [Cost & unit economics](../../10-production-ops/51-cost-unit-economics.md) · [Context windows](../../01-foundations/05-context-windows.md) · [Model ID / versioning](../../dev-surfaces/07-model-id-versioning.md)
+[Prompt caching](../../../../05-prompting/31-prompt-caching.md) · [Cost & unit economics](../../../../10-production-ops/51-cost-unit-economics.md) · [Context windows](../../../../01-foundations/05-context-windows.md) · [Model ID / versioning](../../../../dev-surfaces/07-model-id-versioning.md)

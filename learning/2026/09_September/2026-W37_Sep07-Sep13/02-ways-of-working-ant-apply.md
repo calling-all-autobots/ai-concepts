@@ -29,4 +29,4 @@ This changes what "shipping an agent" *is*. Console-configured agents have the s
 4. In the meantime, **stop making one-off console edits** to anything you'll later want under version control — those become the drift you'll have to reconcile.
 
 ## Connects to
-[Build vs. buy](../../11-product-strategy/53-build-vs-buy.md) · [Production LLM architecture](../../10-production-ops/48-production-architecture.md) · [Regression testing / evals-as-CI](../../09-evaluation/47-regression-testing.md) · [Agentic systems](../../06-agents/34-agentic-systems.md)
+[Build vs. buy](../../../../11-product-strategy/53-build-vs-buy.md) · [Production LLM architecture](../../../../10-production-ops/48-production-architecture.md) · [Regression testing / evals-as-CI](../../../../09-evaluation/47-regression-testing.md) · [Agentic systems](../../../../06-agents/34-agentic-systems.md)

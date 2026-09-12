@@ -1,8 +1,11 @@
-# Anthropic Radar — Backfill: December 2025
+# December 2025 — Monthly Summary
+_Anthropic learning radar · living document · last updated 12/09/2026_
 
-_Historical backfill month (part of the Nov 2025 – Aug 2026 radar sweep), not a live weekly scan._
+**This month:** Quiet but consequential — Agent Skills became an open standard, and Claude Code arrived in Slack.
 
-**This month: 2 impactful items.**
+_A living monthly newsletter — re-swept and rewritten whenever new material lands in this month's folder._
+
+---
 
 ## ① Product releases
 - [Claude Code in Slack (research preview)](02-product-claude-code-in-slack.md) — `@Claude` a bug report in Slack and it spins up a full Claude Code web session, works the repo, and hands back a PR link.

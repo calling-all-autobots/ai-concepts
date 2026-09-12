@@ -1,8 +1,11 @@
-# Anthropic Radar — Backfill: August 2026
+# August 2026 — Monthly Summary
+_Anthropic learning radar · living document · last updated 12/09/2026_
 
-_Historical backfill month, authored as part of the Phase 2 radar sweep (window 2025-11 → 2026-08). Not a live weekly scan._
+**This month:** The agent primitives — computer use, browser, Files, Skills, Admin — went GA in one wave, alongside Inference Hooks, self-hosted Claude Code, and supply-chain scanning for skills and plugins.
 
-**This month: 7 nuggets.**
+_A living monthly newsletter — re-swept and rewritten whenever new material lands in this month's folder._
+
+---
 
 ## ① Product releases
 - [Model Hardware Standard (MHS) — research preview](01-product-model-hardware-standard.md) — "MCP for physical machines"; agents drive lab and factory instruments via an open, model-agnostic spec.

@@ -5,9 +5,9 @@ description: Weekly "learning radar" that scans Anthropic's official sources for
 
 # Anthropic Radar — weekly learning digest
 
-Keep the user current on Anthropic **without manual effort**. Every run produces a
-short, categorized set of "learning nuggets" for the current Mon–Sun week and
-commits them to a dated branch for review.
+Keep the user current on Anthropic with **minimal effort** — run it weekly
+(`/anthropic-radar`). Every run produces a short, categorized set of "learning
+nuggets" for the current Mon–Sun week and commits them to a dated branch for review.
 
 The user is a product manager studying AI concepts (see the study book in this
 repo). Nuggets are written for that audience: what changed, why it matters to a
@@ -31,6 +31,7 @@ Read `learning/.radar-state.json`. It records what has already been reported:
 ```json
 {
   "last_run": "YYYY-MM-DD",
+  "swept_ranges": [ { "start": "YYYY-MM-DD", "end": "YYYY-MM-DD", "via": "radar-sweep" } ],
   "seen": {
     "<stable-id-or-url>": { "date": "YYYY-MM-DD", "week": "YYYY-Www", "title": "..." }
   }
@@ -41,12 +42,17 @@ Read `learning/.radar-state.json`. It records what has already been reported:
   back ~4 weeks so the first digest isn't a firehose.
 - `seen` keys should be stable: a canonical URL, a release-notes anchor, a model
   ID, or `source|title|date` if nothing better exists.
+- Honor `swept_ranges`: never re-report an item dated inside a range already
+  backfilled by the [`radar-sweep`](../radar-sweep/SKILL.md) skill.
 
-## 2. Compute the current week
+## 2. Compute the current week + paths
 
 - Week = Monday → Sunday. Get today's date, find that week's Monday and Sunday.
-- Folder name: `learning/<ISO-year>-W<ISO-week>_<MonDD>-<MonDD>/`
-  e.g. `learning/2026-W37_Sep07-Sep13/`.
+- **Folder structure rule: `learning/<year>/<MM_Month>/<week>/`.**
+  - `year` = `2026`; `MM_Month` = zero-padded number + name, e.g. `09_September`;
+    `week` = `<ISO-year>-W<ISO-week>_<MonDD>-<MonDD>`, e.g. `2026-W37_Sep07-Sep13`.
+  - Full path example: `learning/2026/09_September/2026-W37_Sep07-Sep13/`.
+  - Create the year and month folders if they don't exist.
 - Keep a `dd/mm/yyyy` string of "today" for the commit/branch (user's format).
 
 ## 3. Scan the sources
@@ -134,7 +140,8 @@ you need to write it fully. If you genuinely can't get enough to write a
 self-contained doc, say so *inside the nugget* with what you do know and the
 exact open question — don't hand the user homework.
 
-Write each kept item to a file in the week folder:
+Write each kept item to a file in the week folder
+(`learning/<year>/<MM_Month>/<week>/`):
 `NN-<category-slug>-<short-slug>.md` (category-slug =
 `product` | `practice` | `ways-of-working`). Format:
 
@@ -169,13 +176,15 @@ opinion, the "so what," the nuance. Written as things they could say.>
 nothing to do yet, say why and what would trigger action.>
 
 ## Connects to
-<Relevant study-book lesson links, e.g. [prompt caching](../../05-prompting/31-prompt-caching.md).>
+<Relevant study-book lesson links. A week nugget sits FOUR levels below the repo
+root (`learning/<year>/<month>/<week>/`), so lesson links use `../../../../`,
+e.g. [prompt caching](../../../../05-prompting/31-prompt-caching.md).>
 ```
 
 Target ~250–450 words per nugget — long enough to stand alone, tight enough to
 read in two minutes. Depth and a clear POV beat brevity here.
 
-## 6. Write the week digest — `learning/<week>/README.md`
+## 6. Write the week digest — `learning/<year>/<MM_Month>/<week>/README.md`
 
 ```markdown
 # Anthropic Radar — Week of <MonDD>–<MonDD>, <YYYY> (<ISO-week>)
@@ -197,19 +206,39 @@ _Scanned <dd/mm/yyyy>. Sources: release notes, Anthropic News, Engineering, docs
 - <item> — <why excluded, e.g. "Claude Code v2.1.269 patch — no new capability">
 ```
 
-Also keep/update a top-level `learning/README.md` index that lists every week
-folder newest-first (create it if missing).
+The week digest stays `README.md` **inside the week folder**.
 
-## 7. Update state
+## 7. Refresh the month newsletter — `learning/<year>/<MM_Month>/monthly-summary.md`
+
+Each month folder has a **living monthly newsletter** at `monthly-summary.md`. It
+is **re-swept and rewritten on every run** so it always reflects everything in the
+month. After writing this week's digest:
+
+1. Read every nugget across **all** week sub-folders in the current month.
+2. Rewrite `monthly-summary.md`:
+   - `# <Month Year> — Monthly Summary`
+   - `_Anthropic learning radar · living document · last updated <dd/mm/yyyy>_`
+   - `**This month:** <one-line narrative of the month's throughline>`
+   - a `## Weeks this month` list linking each week's digest
+   - `## ① Product releases` / `## ② New best practices` / `## ③ New ways of working`
+     sections aggregating the month's nuggets (link with the relative path into the
+     week sub-folder, e.g. `2026-W37_.../01-product-....md`), each with a one-line hook.
+3. Also refresh the indexes: `learning/<year>/README.md` (months newest-first) and
+   the top `learning/README.md` — create if missing.
+
+(Historical backfill months have no week sub-folders; the [`radar-sweep`](../radar-sweep/SKILL.md)
+skill owns those and their `monthly-summary.md` files.)
+
+## 8. Update state
 
 Add every **kept** item to `seen` (and impactful items you deliberately deferred).
 It's fine to also record notable excluded items so they don't resurface.
 Set `last_run` to today. Write `learning/.radar-state.json`.
 
-## 8. Commit to a dated branch
+## 9. Commit to a dated branch
 
 - Branch: `radar/<yyyy-mm-dd>` (ISO date sorts well).
-- Stage only `learning/`.
+- Stage only `learning/` (nuggets, week digest, month newsletter, indexes, state).
 - Commit message:
   ```
   Anthropic radar — <dd/mm/yyyy>
@@ -223,10 +252,13 @@ Set `last_run` to today. Write `learning/.radar-state.json`.
 - Report back to the user: the branch name, the count by category, and the
   one-line hooks, so they can decide whether to merge.
 
-## Running unattended (cloud routine)
+## Running it (manual)
 
-This skill is invoked by a weekly Monday cloud routine as well as manually. When
-unattended: complete all steps including the branch push, and make the final
-message a self-contained summary (branch + nuggets + excluded count) since no one
-is watching live. If a source is unreachable, note it in the digest and proceed
-with the rest rather than aborting.
+Run `/anthropic-radar` in this repo, typically Mondays. Complete all steps
+including the branch push (local push is fine), and end with a self-contained
+summary (branch + nuggets by category + excluded count).
+
+A cloud-routine spec for unattended runs lives at
+[`.claude/routines/`](../../routines/README.md) for later experimentation;
+auto-run is currently **off** (manual only). If a source is unreachable, note it
+in the digest and proceed with the rest rather than aborting.

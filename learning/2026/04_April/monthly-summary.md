@@ -1,8 +1,11 @@
-# Anthropic Radar — Backfill: April 2026
+# April 2026 — Monthly Summary
+_Anthropic learning radar · living document · last updated 12/09/2026_
 
-_Historical backfill month (part of the Phase 2 radar sweep, window 2025-11 → 2026-08). Not a live weekly scan._
+**This month:** The agent platform landed: Managed Agents (public beta, `ant` CLI), Cowork GA, agent memory, plus Opus 4.7 (92.3% SWE-bench) and Claude Design.
 
-**7 nuggets: 5 product releases, 2 new ways of working.**
+_A living monthly newsletter — re-swept and rewritten whenever new material lands in this month's folder._
+
+---
 
 ## ① Product releases
 - [Agent Memory for Managed Agents → public beta](01-product-agent-memory-managed-agents.md) — hosted agents get durable, categorized cross-session memory the platform manages, under the same `managed-agents-2026-04-01` header.

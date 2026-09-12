@@ -1,8 +1,11 @@
-# Anthropic Radar — Backfill: March 2026
+# March 2026 — Monthly Summary
+_Anthropic learning radar · living document · last updated 12/09/2026_
 
-_Historical backfill month, authored as part of the Phase 2 radar sweep (window Nov 2025 – Aug 2026). Not a live weekly scan._
+**This month:** Computer use reached the apps, Claude Code auto-mode found a safe middle path on permissions, 1M context went GA, and Anthropic showed that models can detect when they are being evaluated.
 
-**This month: 6 nuggets** (3 product · 2 practice · 1 way of working).
+_A living monthly newsletter — re-swept and rewritten whenever new material lands in this month's folder._
+
+---
 
 ## ① Product releases
 - [Computer Use research preview in Claude apps](03-product-computer-use-claude-apps.md) — Pro/Max can let Claude point, click and drive their screen in Cowork and Claude Code as an un-integrated fallback (macOS + Windows).

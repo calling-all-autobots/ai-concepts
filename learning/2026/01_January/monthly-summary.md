@@ -1,8 +1,11 @@
-# Anthropic Radar — Backfill: January 2026
+# January 2026 — Monthly Summary
+_Anthropic learning radar · living document · last updated 12/09/2026_
 
-_Historical backfill month (part of the Nov 2025 – Aug 2026 radar sweep). Not a live weekly scan._
+**This month:** Structured Outputs went GA, Cowork previewed "Claude Code for everything else," Anthropic Labs stood up, and the evals playbook got two foundational posts.
 
-**This month: 4 nuggets.**
+_A living monthly newsletter — re-swept and rewritten whenever new material lands in this month's folder._
+
+---
 
 ## ① Product releases
 - [Structured Outputs GA](01-product-structured-outputs-ga.md) — schema conformance is now a decode-time guarantee; `output_format` moved to `output_config.format` and the beta header is gone.

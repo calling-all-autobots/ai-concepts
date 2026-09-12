@@ -1,29 +1,35 @@
 # Learning — Anthropic Radar
 
-Weekly digests of **impactful** Anthropic changes, produced by the
-[`anthropic-radar`](../.claude/skills/anthropic-radar/SKILL.md) skill.
+Digests of **impactful** Anthropic changes, kept clean (minor patch notes are
+deliberately excluded). Produced by the [`anthropic-radar`](../.claude/skills/anthropic-radar/SKILL.md)
+skill (ongoing, weekly) and the [`radar-sweep`](../.claude/skills/radar-sweep/SKILL.md)
+skill (one-off historical backfill).
 
-Each week (Monday → Sunday) gets its own folder with short **learning nuggets**,
-each tagged with one of three categories:
+Each item is a **self-contained knowledge document** — *what changed · why it
+matters · a point of view · what to do* — tagged with one category:
+**①** product release · **②** new best practice · **③** new way of working.
 
-- **① Product release** — new/updated models, new products or surfaces, major new
-  API / Claude Code capabilities, deprecations.
-- **② New best practice** — recommended techniques for building *better*.
-- **③ New way of working** — workflow / tooling / process shifts in *how* you build.
+## Structure (the rule)
 
-Minor releases (patch bumps, wording tweaks, availability changes) are deliberately
-**left out** and logged in each week's "Excluded this scan" list, to keep it clean.
+```
+learning/<year>/<month>/<week>/     ← ongoing weekly runs
+learning/<year>/<month>/            ← historical backfill (no weekly sub-folders)
+```
 
-## Weeks (newest first)
+Every month folder has a **`monthly-summary.md`** — a *living newsletter* that is
+re-swept and rewritten whenever new material lands in that month.
 
-- [2026-W37 · Sep 07–13](2026-W37_Sep07-Sep13/README.md)
+## Browse
 
-## Historical backfill
+- **[2026](2026/README.md)** — Jan → Sep (Sep onward has weekly sub-folders)
+- **[2025](2025/README.md)** — Nov, Dec
+- **[reference/](reference/model-deprecations.md)** — cross-cutting living docs (e.g. the model-deprecation timeline) + the sweep audit trail
 
-- [Nov 2025 → Aug 2026 — catch-up sweep](backfill/README.md) — 57 nuggets across 10 months (one-off, via the [`radar-sweep`](../.claude/skills/radar-sweep/SKILL.md) skill).
+## How it runs (manual)
 
----
-
-_How it runs: a cloud routine triggers the radar every Monday; it writes that
-week's nuggets and pushes them to a `radar/<date>` branch for review. Run it
-manually anytime with `/anthropic-radar`._
+- **Weekly:** run `/anthropic-radar` in this repo (Mondays). It scans, filters,
+  writes that week's nuggets to `learning/<year>/<month>/<week>/`, refreshes that
+  month's `monthly-summary.md`, and commits to a `radar/<date>` branch.
+- **Backfill:** `/radar-sweep` for a date range (already run for Nov 2025 → Aug 2026).
+- A cloud-routine spec exists at [`.claude/routines/`](../.claude/routines/README.md)
+  for later experimentation; auto-run is currently off (manual only).

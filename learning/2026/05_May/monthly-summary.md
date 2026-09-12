@@ -1,8 +1,11 @@
-# Anthropic Radar — Backfill: May 2026
+# May 2026 — Monthly Summary
+_Anthropic learning radar · living document · last updated 12/09/2026_
 
-_Historical backfill month (part of the Nov 2025 → Aug 2026 radar sweep). Not a live weekly digest._
+**This month:** Opus 4.8 shipped with Dynamic Workflows (hundreds of parallel subagents), multi-agent orchestration + Outcomes went public beta, and "How we contain Claude" set out the environment-first safety doctrine.
 
-**6 nuggets** — 5 product releases, 1 new best practice.
+_A living monthly newsletter — re-swept and rewritten whenever new material lands in this month's folder._
+
+---
 
 ## ① Product releases
 - [Claude Opus 4.8 + Dynamic Workflows research preview](01-product-opus-4-8-dynamic-workflows.md) — new frontier model (1M ctx + high effort by default) that plans a job and runs hundreds of parallel subagents in one Claude Code session.
