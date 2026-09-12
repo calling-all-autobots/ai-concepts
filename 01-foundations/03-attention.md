@@ -31,7 +31,7 @@ The mechanism is usually explained with three roles, and they map cleanly onto s
 The clean analogy: it's a **search**. Your query is what you type in; every document has a key (its title, how it indexes itself); the value is the document's actual contents. Attention matches each word's query against every word's key to decide relevance, then pulls in the values of whatever matched, weighted by how well it matched.
 
 > [!NOTE]
-> **Vector** — throughout this lesson, "query," "key," and "value" are each a *vector*: a list of numbers that represents a piece of meaning in a way the model can do math on. Where these number-lists come from and why similar meanings end up with similar numbers is its own topic — see [Embeddings](02-embeddings.md). Here, just hold that each word is a handful of numbers, and closeness between two number-lists means "related in meaning."
+> **Vector** — query, key, and value are each a *vector* (an ordered list of numbers; see the [ML vocabulary primer](../primers/ml-vocabulary.md)). Here, just hold that each word becomes a handful of numbers, and closeness between two of them means "related in meaning." Where those numbers come from is its own topic — see [Embeddings](02-embeddings.md).
 
 The subtle point people miss: query, key, and value are **not three different inputs**. They're three different *views of the same word*, each produced by running the word's vector through a small learned transformation. The model learns, during [training](../primers/ml-vocabulary.md), how to turn a word into a good "what I'm looking for," a good "what I offer," and a good "what I carry." So the same word plays all three roles at once — asker, advertiser, and content-provider — depending on whose turn it is to look.
 
@@ -56,7 +56,7 @@ The takeaway to say out loud: **attention weights are a soft, learned, content-b
 
 ## Why this captures long-range dependencies directly
 
-This is the property that made attention win, and it's worth being precise about *why*. In the old [RNN (Recurrent Neural Network)](../primers/ml-vocabulary.md) approach (see the primer boxes in [Transformers](04-transformers.md)), for word 100 to be influenced by word 1, the signal had to survive being passed hand-to-hand through 99 intermediate steps — and it decayed along the way, like a rumor down a long line of people.
+This is the property that made attention win, and it's worth being precise about *why*. In the old [RNN (Recurrent Neural Network)](../primers/ml-vocabulary.md) approach, for word 100 to be influenced by word 1, the signal had to survive being passed hand-to-hand through 99 intermediate steps — and it decayed along the way, like a rumor down a long line of people.
 
 Attention has no line. Word 100's query compares against word 1's key **directly**, in a single step. The "distance" between any two words is always one hop, whether they're adjacent or a thousand words apart. That's the real meaning of "captures long-range dependencies": not that attention has better memory, but that it **abolishes distance entirely** — every pair of positions is equally reachable.
 

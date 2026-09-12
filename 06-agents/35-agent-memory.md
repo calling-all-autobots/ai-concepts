@@ -16,7 +16,7 @@ That creates two distinct failures. **Within one long task:** the context window
 
 **Why it holds:** it nails the crux — the memory isn't *in* the person. The model is genuinely amnesiac; all persistence is an *external* system of writing and retrieving notes that the person operates. The small desk also explains why you need memory management even *within* a session (the desk fills), and "what to write down, what to look up" being the person's deliberate choice captures the key truth that **memory is a policy you design, not a capability the model has.**
 
-**Say it like this:** "The model is stateless — it only knows what's in its context window right now, and that's wiped between sessions. Agent memory is a system you build around it: store things externally, and pull the relevant bits back into context when needed. Short-term memory *is* the context window; long-term memory is basically [retrieval](21-rag.md) over the agent's own past."
+**Say it like this:** "The model is stateless — it only knows what's in its context window right now, and that's wiped between sessions. Agent memory is a system you build around it: store things externally, and pull the relevant bits back into context when needed. Short-term memory *is* the context window; long-term memory is basically [retrieval](../04-retrieval-knowledge/21-rag.md) over the agent's own past."
 
 *Where it breaks:* a real amnesiac still reasons well and can read their own handwriting reliably. An agent can **write a wrong note** (bad extraction), **retrieve the wrong note** (bad retrieval), or **trust a stale note** with no gut sense that a filed fact has expired — failure modes the tidy filing-cabinet image hides.
 
@@ -39,7 +39,7 @@ flowchart LR
   LT -->|"retrieve: load what's relevant"| CW
 ```
 
-The most important consequence: **long-term memory is essentially [RAG](21-rag.md) (Retrieval-Augmented Generation) pointed at the agent's own experience.** You *write* experiences to external storage, then *retrieve* the relevant ones back into the context window when they're needed — often through the same [vector-database](23-vector-databases.md) and [retrieval](21-rag.md) machinery used for documents. So everything you know about retrieval quality applies here too; memory doesn't get a special exemption.
+The most important consequence: **long-term memory is essentially [RAG](../04-retrieval-knowledge/21-rag.md) (Retrieval-Augmented Generation) pointed at the agent's own experience.** You *write* experiences to external storage, then *retrieve* the relevant ones back into the context window when they're needed — often through the same [vector-database](../04-retrieval-knowledge/23-vector-databases.md) and [retrieval](../04-retrieval-knowledge/21-rag.md) machinery used for documents. So everything you know about retrieval quality applies here too; memory doesn't get a special exemption.
 
 ## The write / read cycle — and that both are policies you design
 
@@ -68,7 +68,7 @@ flowchart TD
 
 - **What to remember is a hard product decision, not a technical default.** Remember too much and you get context bloat, higher cost, noisy retrieval, and a growing pile of stale or sensitive data. Remember too little and you're back to the goldfish agent. Memory is *curation*, and there's no free lunch.
 - **Stale or wrong memory poisons the future.** A one-off model mistake is transient; a wrong fact *written to long-term memory* ("user's address is X") gets retrieved and trusted on every future session. Memory errors **persist and compound**, so you need a story for **updating and invalidating** memories, not just writing them.
-- **Retrieval quality caps memory quality** — the same iron law as [RAG](21-rag.md). If the retrieval step surfaces the wrong past note, the agent confidently acts on the wrong information.
+- **Retrieval quality caps memory quality** — the same iron law as [RAG](../04-retrieval-knowledge/21-rag.md). If the retrieval step surfaces the wrong past note, the agent confidently acts on the wrong information.
 - **It costs tokens every step.** Loading memory into the context on each step is recurring input cost and latency; this is a big reason [prompt caching](../05-prompting/31-prompt-caching.md) and lean memory matter for agents.
 - **Persistence is a privacy decision.** Storing user information across sessions is a data-retention and [PII](../08-safety-trust/43-privacy-pii.md) (personally identifiable information) question with real legal and trust weight — what you remember, for how long, and whether the user can see or delete it.
 
@@ -77,7 +77,7 @@ flowchart TD
 - The model is **stateless** — it knows only what's in its [context window](../01-foundations/05-context-windows.md) right now, and that's finite within a task and wiped between sessions. That's the problem agent memory exists to solve.
 - **Memory is not a model feature; it's a system you build around the model** — external storage plus a *policy* for what to load back into context. The model only ever sees the context.
 - **Short-term (working) memory = the context window** (ephemeral). **Long-term memory = information persisted outside it** (DB/files/vector store), retrieved back in when relevant.
-- **Long-term memory is basically [RAG](21-rag.md) over the agent's own experience:** *write* what's worth keeping, *retrieve* the relevant slice each step. Both write and read are policies you design and both can fail.
+- **Long-term memory is basically [RAG](../04-retrieval-knowledge/21-rag.md) over the agent's own experience:** *write* what's worth keeping, *retrieve* the relevant slice each step. Both write and read are policies you design and both can fail.
 - To manage the finite window: **summarize/compact** old turns (frees space, **lossy**) or use **retrieval** to keep only the relevant slice live.
 - PM tradeoffs: **what to remember is curation** (too much = bloat/cost/privacy, too little = goldfish); **stale memory persists and poisons** future behavior (need invalidation); **retrieval quality caps it**; it **costs tokens every step**; and **persistence is a privacy/PII decision**.
 

@@ -22,118 +22,118 @@ Foundational jargon (model, weights, training, inference, GPU) lives in the [ML 
 
 ## 2. Model behavior and training
 
-**7. Fine-tuning** — fine-tuning, supervised fine-tuning (SFT), catastrophic forgetting, domain adaptation
+**7. [Fine-tuning](02-model-behavior-training/07-fine-tuning.md) ✅** — fine-tuning, supervised fine-tuning (SFT), catastrophic forgetting, domain adaptation
 
-**8. PEFT** — PEFT (parameter-efficient fine-tuning), adapters, prefix tuning, prompt tuning
+**8. [PEFT](02-model-behavior-training/08-peft.md) ✅** — PEFT (parameter-efficient fine-tuning), adapters, prefix tuning, prompt tuning
 
-**9. LoRA** — LoRA (low-rank adaptation), adapter, low-rank update, frozen weights
+**9. [LoRA](02-model-behavior-training/09-lora.md) ✅** — LoRA (low-rank adaptation), adapter, low-rank update, frozen weights
 
-**10. Instruction tuning** — instruction tuning, instruction dataset, instruction following, chat template
+**10. [Instruction tuning](02-model-behavior-training/10-instruction-tuning.md) ✅** — instruction tuning, instruction dataset, instruction following, chat template
 
-**11. RLHF** — RLHF (reinforcement learning from human feedback), reward model, preference data, alignment
+**11. [RLHF](02-model-behavior-training/11-rlhf.md) ✅** — RLHF (reinforcement learning from human feedback), reward model, preference data, alignment
 
-**12. DPO** — DPO (direct preference optimization), preference pairs, reward-model-free
+**12. [DPO](02-model-behavior-training/12-dpo.md) ✅** — DPO (direct preference optimization), preference pairs, reward-model-free
 
-**13. Distillation** — distillation, teacher model, student model, knowledge transfer
+**13. [Distillation](02-model-behavior-training/13-distillation.md) ✅** — distillation, teacher model, student model, knowledge transfer
 
-**14. Quantization** — quantization, precision (FP16 / INT8 / INT4), model compression, accuracy tradeoff
+**14. [Quantization](02-model-behavior-training/14-quantization.md) ✅** — quantization, precision (FP16 / INT8 / INT4), model compression, accuracy tradeoff
 
-**15. Mixture of Experts** — mixture of experts (MoE), expert, router, sparse activation, active parameters
+**15. [Mixture of Experts](02-model-behavior-training/15-mixture-of-experts.md) ✅** — mixture of experts (MoE), expert, router, sparse activation, active parameters
 
 ## 3. Reasoning and generation
 
-**16. Sampling and decoding** — temperature, top-p (nucleus), top-k, greedy decoding, determinism
+**16. [Sampling and decoding](03-reasoning-generation/16-sampling-decoding.md) ✅** — temperature, top-p (nucleus), top-k, greedy decoding, determinism
 
-**17. Chain-of-thought and extended thinking** — chain-of-thought (CoT), step-by-step, extended thinking, scratchpad
+**17. [Chain-of-thought and extended thinking](03-reasoning-generation/17-chain-of-thought.md) ✅** — chain-of-thought (CoT), step-by-step, extended thinking, scratchpad
 
-**18. Reasoning models and test-time compute** — reasoning model, test-time compute, inference-time scaling, thinking tokens
+**18. [Reasoning models and test-time compute](03-reasoning-generation/18-reasoning-models.md) ✅** — reasoning model, test-time compute, inference-time scaling, thinking tokens
 
-**19. Hallucination** — hallucination, confabulation, grounding, factuality
+**19. [Hallucination](03-reasoning-generation/19-hallucination.md) ✅** — hallucination, confabulation, grounding, factuality
 
-**20. Structured outputs** — structured output, JSON mode, function schema, constrained decoding
+**20. [Structured outputs](03-reasoning-generation/20-structured-outputs.md) ✅** — structured output, JSON mode, function schema, constrained decoding
 
 ## 4. Retrieval and knowledge (RAG stack)
 
-**21. RAG** — retrieval-augmented generation (RAG), retriever, generator, grounding, knowledge base
+**21. [RAG](04-retrieval-knowledge/21-rag.md) ✅** — retrieval-augmented generation (RAG), retriever, generator, grounding, knowledge base
 
-**22. Chunking** — chunking, chunk size, overlap, splitting strategy
+**22. [Chunking](04-retrieval-knowledge/22-chunking.md) ✅** — chunking, chunk size, overlap, splitting strategy
 
-**23. Vector databases** — vector database, index, approximate nearest neighbor (ANN), similarity search
+**23. [Vector databases](04-retrieval-knowledge/23-vector-databases.md) ✅** — vector database, index, approximate nearest neighbor (ANN), similarity search
 
-**24. Retrieval** — retrieval, top-k retrieval, recall, relevance
+**24. [Retrieval](04-retrieval-knowledge/24-retrieval.md) ✅** — retrieval, top-k retrieval, recall, relevance
 
-**25. Reranking** — reranking, cross-encoder, relevance score
+**25. [Hybrid search](04-retrieval-knowledge/25-hybrid-search.md) ✅** — hybrid search, keyword search (BM25), dense vs. sparse, fusion
 
-**26. Hybrid search** — hybrid search, keyword search (BM25), dense vs. sparse, fusion
+**26. [Reranking](04-retrieval-knowledge/26-reranking.md) ✅** — reranking, cross-encoder, relevance score
 
-**27. Grounding and citations** — grounding, citation, attribution, source passage
+**27. [Grounding and citations](04-retrieval-knowledge/27-grounding-citations.md) ✅** — grounding, citation, attribution, source passage
 
 ## 5. Prompting
 
-**28. Prompt engineering** — prompt, system prompt, instruction, prompt template, delimiters
+**28. [Prompt engineering](05-prompting/28-prompt-engineering.md) ✅** — prompt, system prompt, instruction, prompt template, delimiters
 
-**29. Few-shot and in-context learning** — few-shot, zero-shot, in-context learning (ICL), exemplars
+**29. [Few-shot and in-context learning](05-prompting/29-few-shot-icl.md) ✅** — few-shot, zero-shot, in-context learning (ICL), exemplars
 
-**30. KV caching** — KV (key/value) cache, decoding speed, memory footprint
+**30. [KV caching](05-prompting/30-kv-caching.md) ✅** — KV (key/value) cache, decoding speed, memory footprint
 
-**31. Prompt caching** — prompt caching, cache hit, cached prefix
+**31. [Prompt caching](05-prompting/31-prompt-caching.md) ✅** — prompt caching, cache hit, cached prefix
 
 ## 6. Agents
 
-**32. Tool calling / function calling** — tool calling, function calling, tool schema, API call
+**32. [Tool calling / function calling](06-agents/32-tool-calling.md) ✅** — tool calling, function calling, tool schema, API call
 
-**33. MCP** — Model Context Protocol (MCP), server, tool interoperability
+**33. [MCP](06-agents/33-mcp.md) ✅** — Model Context Protocol (MCP), server, tool interoperability
 
-**34. Agentic systems** — agent, agentic loop, tool use, autonomy, environment
+**34. [Agentic systems](06-agents/34-agentic-systems.md) ✅** — agent, agentic loop, tool use, autonomy, environment
 
-**35. Agent memory** — short-term memory, long-term memory, state, scratchpad
+**35. [Agent memory](06-agents/35-agent-memory.md) ✅** — short-term memory, long-term memory, state, scratchpad
 
-**36. Planning and orchestration** — planning, orchestration, task decomposition, workflow
+**36. [Planning and orchestration](06-agents/36-planning-orchestration.md) ✅** — planning, orchestration, task decomposition, workflow
 
-**37. Multi-agent architectures** — multi-agent, orchestrator, sub-agent, handoff
+**37. [Multi-agent architectures](06-agents/37-multi-agent.md) ✅** — multi-agent, orchestrator, sub-agent, handoff
 
 ## 7. Multimodal
 
-**38. Vision-language models** — vision-language model (VLM), multimodal, image encoder
+**38. [Vision-language models](07-multimodal/38-vision-language.md) ✅** — vision-language model (VLM), multimodal, image encoder
 
-**39. Audio and speech** — speech-to-text (STT), text-to-speech (TTS), automatic speech recognition (ASR)
+**39. [Audio and speech](07-multimodal/39-audio-speech.md) ✅** — speech-to-text (STT), text-to-speech (TTS), automatic speech recognition (ASR)
 
-**40. Multimodal product surfaces** — modality, cross-modal, multimodal input / output
+**40. [Multimodal product surfaces](07-multimodal/40-multimodal-products.md) ✅** — modality, cross-modal, multimodal input / output
 
 ## 8. Safety and trust
 
-**41. Guardrails** — guardrail, input / output filter, policy, moderation
+**41. [Guardrails](08-safety-trust/41-guardrails.md) ✅** — guardrail, input / output filter, policy, moderation
 
-**42. AI security** — prompt injection, jailbreak, data exfiltration, adversarial input
+**42. [AI security](08-safety-trust/42-ai-security.md) ✅** — prompt injection, jailbreak, data exfiltration, adversarial input
 
-**43. Privacy and PII** — personally identifiable information (PII), redaction, data retention
+**43. [Privacy and PII](08-safety-trust/43-privacy-pii.md) ✅** — personally identifiable information (PII), redaction, data retention
 
-**44. Responsible AI** — bias, fairness, transparency, regulation (EU AI Act)
+**44. [Responsible AI](08-safety-trust/44-responsible-ai.md) ✅** — bias, fairness, transparency, regulation (EU AI Act)
 
 ## 9. Evaluation
 
-**45. Evaluation methods** — eval, offline eval, human eval, LLM-as-judge
+**45. [Evaluation methods](09-evaluation/45-evaluation-methods.md) ✅** — eval, offline eval, human eval, LLM-as-judge
 
-**46. Benchmarks and their limits** — benchmark, leaderboard, contamination, overfitting to the test
+**46. [Benchmarks and their limits](09-evaluation/46-benchmarks.md) ✅** — benchmark, leaderboard, contamination, overfitting to the test
 
-**47. Regression testing** — regression test, golden set, eval suite
+**47. [Regression testing](09-evaluation/47-regression-testing.md) ✅** — regression test, golden set, eval suite
 
 ## 10. Production and operations
 
-**48. Production LLM architecture** — inference server, gateway / router, fallback, orchestration
+**48. [Production LLM architecture](10-production-ops/48-production-architecture.md) ✅** — inference server, gateway / router, fallback, orchestration
 
-**49. Inference optimization** — latency, throughput, batching, streaming
+**49. [Inference optimization](10-production-ops/49-inference-optimization.md) ✅** — latency, throughput, batching, streaming
 
-**50. LLM observability** — observability, tracing, logging, monitoring, drift
+**50. [LLM observability](10-production-ops/50-observability.md) ✅** — observability, tracing, logging, monitoring, drift
 
-**51. Cost and unit economics** — cost per query, tokens, gross margin, unit economics
+**51. [Cost and unit economics](10-production-ops/51-cost-unit-economics.md) ✅** — cost per query, tokens, gross margin, unit economics
 
 ## 11. Product and strategy
 
-**52. AI product metrics** — deflection rate, acceptance / edit rate, containment, task completion
+**52. [AI product metrics](11-product-strategy/52-ai-product-metrics.md) ✅** — deflection rate, acceptance / edit rate, containment, task completion
 
-**53. Build vs. buy** — build vs. buy, API vs. open-source, self-hosting
+**53. [Build vs. buy](11-product-strategy/53-build-vs-buy.md) ✅** — build vs. buy, API vs. open-source, self-hosting
 
-**54. Data moats and feedback loops** — data moat, feedback loop, proprietary data
+**54. [Data moats and feedback loops](11-product-strategy/54-data-moats.md) ✅** — data moat, feedback loop, proprietary data
 
-**55. The iron triangle** — cost / latency / quality tradeoff, the iron triangle
+**55. [The iron triangle](11-product-strategy/55-iron-triangle.md) ✅** — cost / latency / quality tradeoff, the iron triangle

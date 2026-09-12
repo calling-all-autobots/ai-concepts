@@ -22,6 +22,19 @@ Training happens once, to *make* the model. Inference happens on every single re
 | **Weights / parameters** | The numbers inside the model that hold everything it has learned. More = more capacity to learn and more compute to run. "Weights" and "parameters" are the same thing. | "Llama 3 70B" means the model has 70 billion parameters. |
 | **Parameter count vs. capability** | Bigger models are generally more capable but slower and costlier. Much of AI product work is finding the *smallest* model that's good enough — it's the cheapest and fastest. | A small model may summarize an email fine; a large one is worth it for hard reasoning. |
 
+## The numbers it works with
+
+| Term | What it means (PM-level) | Example |
+|------|--------------------------|---------|
+| **Vector** | An ordered list of numbers, like `[0.12, -0.98, 0.44, …]`. A 2-number vector is a point on a graph (an x and a y); the vectors models use hold hundreds or thousands of numbers — a point in a space with that many dimensions. "How close are two vectors" is a calculation that works the same however many numbers they hold, which is how a model compares meanings numerically. | An **embedding** — the numeric representation of a word or sentence's meaning — is a vector. |
+
+## What transformers replaced
+
+| Term | What it means (PM-level) | Example |
+|------|--------------------------|---------|
+| **RNN (Recurrent Neural Network)** | The pre-2017 standard for handling text. It reads **one word at a time**, left to right, carrying a small running summary forward — like reading through a keyhole while rewriting one sticky note. Two fatal flaws: it **forgets** early words by the end, and it **can't be parallelized** (word 100 must wait for word 99), so it can't use a GPU's full power. The transformer fixed both by reading every word at once. | "Why were transformers a breakthrough?" is really "why did reading all-at-once beat the RNN's one-at-a-time?" |
+| **LSTM (Long Short-Term Memory)** | A more elaborate RNN that stretched how many earlier words could be remembered, but never fixed the can't-parallelize flaw. It was the last major pre-transformer architecture. | LSTMs powered translation and speech before ~2017. |
+
 ## Making it
 
 | Term | What it means (PM-level) | Example |

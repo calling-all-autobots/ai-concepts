@@ -7,7 +7,7 @@ By now you have the ingredients. Text becomes [tokens](01-tokenization.md); toke
 The **transformer** is that architecture. Introduced in the 2017 paper "Attention Is All You Need," it is the blueprint under every modern large language model (GPT, Claude, Gemini, Llama). Its achievement is twofold: it turns the raw attention operation into a full text-processing model, and it does so in a shape that runs efficiently on the hardware AI is trained on — which is what let these models grow from millions to hundreds of billions of parameters. That second part is the real reason the transformer, and not some earlier design, changed the field. To see why, it helps to know what it replaced.
 
 > [!NOTE]
-> **RNN (Recurrent Neural Network)** — the pre-2017 way of handling text. It reads **one word at a time**, left to right, carrying a small running summary forward — like reading through a keyhole while rewriting one sticky note. Two fatal flaws: it **forgets** early words by the end, and it **can't be parallelized** (word 100 waits for word 99). Its successor the LSTM stretched the memory but never fixed either problem. The transformer's ability to process every word at once is exactly what did.
+> **RNN / LSTM** — the pre-2017 architectures the transformer replaced; full definitions are in the [ML vocabulary primer](../primers/ml-vocabulary.md). The one property that matters here: an RNN reads **one word at a time** (word 100 waits for word 99), so it **can't be parallelized** — and its successor the LSTM never fixed that. The transformer's ability to process every word at once is exactly what did.
 
 ## The one analogy to remember
 

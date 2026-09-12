@@ -88,3 +88,17 @@ New to the vocabulary? Start with the [ML vocabulary primer](primers/ml-vocabula
 53. [Build vs. buy](11-product-strategy/53-build-vs-buy.md)
 54. [Data moats and feedback loops](11-product-strategy/54-data-moats.md)
 55. [The iron triangle](11-product-strategy/55-iron-triangle.md)
+
+---
+
+## Appendix — Dev surfaces (usage tier)
+
+Operational, platform-facing vocabulary — the surfaces and mechanics of *building with* an LLM, kept separate from the concept syllabus. See the [Dev surfaces index](dev-surfaces/README.md) and the practical [usage keyword index](USAGE-KEYWORDS.md).
+
+- [Workbench / Playground](dev-surfaces/01-workbench-playground.md)
+- [Console / dashboard](dev-surfaces/02-console-dashboard.md)
+- [SDK](dev-surfaces/03-sdk.md)
+- [API endpoint](dev-surfaces/04-api-endpoint.md)
+- [API key](dev-surfaces/05-api-key.md)
+- [Rate limits (TPM / RPM)](dev-surfaces/06-rate-limits.md)
+- [Model ID / snapshot / version](dev-surfaces/07-model-id-versioning.md)
