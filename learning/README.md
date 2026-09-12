@@ -18,6 +18,10 @@ Minor releases (patch bumps, wording tweaks, availability changes) are deliberat
 
 - [2026-W37 · Sep 07–13](2026-W37_Sep07-Sep13/README.md)
 
+## Historical backfill
+
+- [Nov 2025 → Aug 2026 — catch-up sweep](backfill/README.md) — 57 nuggets across 10 months (one-off, via the [`radar-sweep`](../.claude/skills/radar-sweep/SKILL.md) skill).
+
 ---
 
 _How it runs: a cloud routine triggers the radar every Monday; it writes that

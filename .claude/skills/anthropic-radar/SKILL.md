@@ -135,8 +135,12 @@ self-contained doc, say so *inside the nugget* with what you do know and the
 exact open question — don't hand the user homework.
 
 Write each kept item to a file in the week folder:
-`NN-<category-slug>-<short-slug>.md` (NN = 01, 02, …; category-slug =
+`NN-<category-slug>-<short-slug>.md` (category-slug =
 `product` | `practice` | `ways-of-working`). Format:
+
+**Numbering rule (always):** `NN` starts at **01** and counts up — `01, 02, 03…`.
+**Never use `00`**, for any file, ever — including cross-cutting or "special"
+nuggets. If a file feels like it belongs "before" the rest, it's still `01`.
 
 ```markdown
 # <Title>
