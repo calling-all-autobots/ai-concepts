@@ -83,4 +83,6 @@ This is the authoring worklist for Phase 2 (one writer agent per month).
 Enterprise-admin/compliance items (Compliance API sessions, Admin API in SDKs, RBAC, self-serve Enterprise, HIPAA config, Analytics API), pricing tweaks (Sonnet 5 pricing made permanent), regional/parity (Bedrock/Azure/Foundry availability, search-result blocks on Bedrock), pure UI/product polish (Monthly Recap, Focus settings, in-place artifact editing, interactive mobile viz, Office add-ins), minor API params (max_tokens bumps, extended-thinking `display`, Models API fields), the Workbench→Playground rename, docs-platform move, and PR/policy posts (open-weights position, GOV.UK pilot, grants).
 
 ## Volume
-~35 nuggets across 10 months (excluding "light/optional" and the noise list).
+Comprehensive scope authored **57 nuggets** across 10 months (56 monthly + 1
+cross-cutting deprecation timeline); "light/optional" items were promoted to full
+nuggets and the noise list was excluded.

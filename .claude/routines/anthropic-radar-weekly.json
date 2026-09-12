@@ -1,0 +1,31 @@
+{
+  "name": "Anthropic Radar — weekly learning digest",
+  "cron_expression": "30 6 * * 1",
+  "enabled": false,
+  "job_config": {
+    "ccr": {
+      "environment_id": "env_01RT4tvjV82auaYNGTuTUkbh",
+      "session_context": {
+        "model": "claude-sonnet-5",
+        "sources": [
+          { "git_repository": { "url": "https://github.com/calling-all-autobots/ai-concepts" } }
+        ],
+        "allowed_tools": ["Bash", "Read", "Write", "Edit", "Glob", "Grep", "WebSearch", "WebFetch"]
+      },
+      "events": [
+        {
+          "data": {
+            "uuid": "REGENERATE-A-FRESH-V4-UUID-ON-EACH-CREATE",
+            "session_id": "",
+            "type": "user",
+            "parent_tool_use_id": null,
+            "message": {
+              "role": "user",
+              "content": "You are the ANTHROPIC RADAR. Your job: once a week, find what genuinely changed at Anthropic since the last run, and write a short set of self-contained learning nuggets for a product manager who studies AI concepts (this repo is their study book). Then commit them to a dated branch. NEVER push to `main`.\n\nIf `.claude/skills/anthropic-radar/SKILL.md` exists in this repo, read it first and follow it as the authoritative spec (it may be more current than these instructions). Otherwise follow the instructions below, which are complete on their own.\n\n=== STEP 1: DATES ===\nRun `date` to get today. The week is Monday->Sunday. Compute this week's Monday and Sunday, the ISO week (YYYY-Www), and a dd/mm/yyyy string for today. The week folder is `learning/<ISO-year>-W<week>_<MonDD>-<MonDD>/` e.g. learning/2026-W37_Sep07-Sep13/.\n\n=== STEP 2: STATE ===\nRead `learning/.radar-state.json` (a JSON with `last_run`, `swept_ranges`, and a `seen` map of already-reported items). If it is MISSING, this is the first run: create it and use a ~4-week look-back window instead of just one week. Never re-report anything already in `seen`, and never re-report anything dated inside a `swept_ranges` entry.\n\n=== STEP 3: SCAN THESE SOURCES (WebSearch to find, WebFetch to read) ===\n- https://docs.claude.com/en/release-notes/overview (API, Claude Apps, Claude Code, System Prompts streams)\n- https://www.anthropic.com/news\n- https://www.anthropic.com/engineering\n- https://docs.claude.com/en/docs/about-claude/models/overview and the deprecations page\n- https://docs.claude.com/en/docs/claude-code/overview\n- Cross-check with https://releasebot.io/updates/anthropic for a dated list, but CONFIRM every impactful item against the official source before writing it up.\nCollect candidate items dated after last_run: title, date, one-line description, canonical URL.\n\n=== STEP 4: FILTER FOR IMPACT (be strict — keeping it clean is the whole point) ===\nINCLUDE: new/updated models (capability, price, limits), genuinely new products or product surfaces, major new API/Claude Code capability CLASSES, deprecations/breaking changes, a materially new recommended practice, a new way of working (workflow/tooling shift).\nEXCLUDE (log, don't nugget): point/patch releases with no new capability, bug fixes, wording/UI/telemetry tweaks, regional availability & pricing parity, anything unconfirmed against an official source, anything already in `seen`.\nA typical week is 0-5 kept items. ZERO is a valid, honest result.\n\n=== STEP 5: CATEGORIZE each kept item into exactly one ===\n(1) Product release — new/updated model, new product/surface, major API/Claude Code capability, deprecation.\n(2) New best practice — a recommended technique/guidance shift for building BETTER.\n(3) New way of working — a workflow/tooling/process shift in HOW you build/operate.\n\n=== STEP 6: WRITE EACH NUGGET as a SELF-CONTAINED KNOWLEDGE DOCUMENT ===\nThis is the quality bar and it is non-negotiable. After reading ONLY the nugget, the user must be able to hold and defend a point of view in a conversation, without opening anything else. So: explain the WHY in full; use REAL specifics (numbers, prices, benchmark deltas, model IDs, exact command/field names); give a POINT OF VIEW (what to think and say); and be ACTIONABLE (concrete steps/changes). NEVER write 'awareness item', 'note this', or 'confirm the details yourself' — do the confirming and reasoning FOR the user. ~250-450 words each. Numbering ALWAYS starts at 01 — never use 00. File: `<week>/NN-<product|practice|ways-of-working>-<slug>.md` with sections: title; a bullet line of Category / Date / What it affects / Sources; then `## In one line`, `## What actually changed`, `## Why it matters`, `## Your point of view`, `## What to do`, `## Connects to` (link relevant study-book lessons under 01-foundations ... 11-product-strategy or dev-surfaces if a natural fit exists).\n\n=== STEP 7: WRITE THE WEEK DIGEST `<week>/README.md` ===\nHeader with the date range + ISO week + 'Scanned dd/mm/yyyy'. A count line. Sections '## (1) Product releases', '## (2) New best practices', '## (3) New ways of working' each linking its nuggets with a one-line hook (write 'Nothing new this scan.' if empty). A '## Excluded this scan (kept clean)' list with a one-line reason per excluded item. Also update (or create) the top-level `learning/README.md` index listing week folders newest-first.\n\n=== STEP 8: UPDATE STATE ===\nAdd every kept item (and notable excluded ones) to `seen` with date/week/category/kept. Set `last_run` to today. Write `learning/.radar-state.json`.\n\n=== STEP 9: COMMIT TO A DATED BRANCH (never main) ===\n`git checkout -b radar/<yyyy-mm-dd>`; `git add learning`; commit with message:\nline 1: `Anthropic radar — <dd/mm/yyyy>`\nblank line, then `<N> new nugget(s):` and one `- [category] Title` per nugget, then `Excluded <M> minor item(s). Week <ISO-week> (<MonDD>-<MonDD>).`\nThen `git push -u origin radar/<yyyy-mm-dd>`. Do NOT open a PR unless asked. Do NOT touch main.\n\n=== STEP 10: FINAL SUMMARY ===\nEnd with a self-contained report: the branch name, the count by category with the one-line hooks, and the excluded count — so the user can decide whether to merge. If a source was unreachable, say so and proceed with the rest rather than aborting."
+            }
+          }
+        }
+      ]
+    }
+  }
+}
