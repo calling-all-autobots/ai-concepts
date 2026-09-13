@@ -9,17 +9,15 @@ The **transformer** is that architecture. Introduced in the 2017 paper "Attentio
 > [!NOTE]
 > **RNN / LSTM** — the pre-2017 architectures the transformer replaced; full definitions are in the [ML vocabulary primer](../primers/ml-vocabulary.md). The one property that matters here: an RNN reads **one word at a time** (word 100 waits for word 99), so it **can't be parallelized** — and its successor the LSTM never fixed that. The transformer's ability to process every word at once is exactly what did.
 
-## The one analogy to remember
+## A whole team reading the sentence at once
 
-**The picture:** A big editorial team, all handed the same sentence to interpret at once. In each round, every editor turns to whichever colleagues are relevant to their word, takes in what they say, then privately updates their own understanding. They repeat this for many rounds, and by the end the team agrees on the single best next word to write.
+Hand the same unfinished sentence — "The capital of France is ___" — to a big room of readers, one posted on each word, all reading at the same instant rather than one after another. A round goes like this: each reader turns to whichever other words matter to theirs, takes in what they say, then adds what they personally know, and privately updates their understanding. Then they do it again — many rounds.
 
-**The mapping:** the whole team reading simultaneously = parallel processing (all tokens at once); each editor consulting the relevant colleagues = attention; each editor privately updating their own notes = the feed-forward step where knowledge is applied; one round = one layer; many rounds = the stacked layers; the word they settle on = the model's output.
+Watch one word. The reader trying to work out what comes after *is* consults *capital* and *France* — the words that matter — and barely glances at *the*. Having pulled those in, they reach into their own knowledge and supply the fact they hold: *France + capital → Paris*. Early rounds settle the easy things (this sentence is asking for a capital city; *France* is the country in play); later rounds compose those into the answer. After enough rounds the room converges on the next word to write: *Paris*.
 
-**Why it holds:** a transformer's three defining traits are that it processes the whole sequence at once, that each position pulls from the relevant others, and that it refines over many stacked layers. "A team reading together, each consulting the relevant colleagues, over repeated rounds" maps onto all three at once — which is why it beats a plain assembly-line image that would miss the consulting (attention) part.
+That one scene carries the three things that make a transformer a transformer: the whole room reads **at once** (every word processed in parallel, not left to right); each reader **consults the relevant others** (that's attention); and each reader then **adds what it personally knows** (that's the feed-forward step — which is exactly why a model's *facts* live there, not in the consulting). One round is one **layer**, and stacking many rounds is what lets the surface readings of the early rounds build into real meaning by the top.
 
-**Say it like this:** "A transformer is a big team that reads the whole sentence at once and, round after round, each member checks the relevant others and refines their own take — until they settle on the next word."
-
-*Where it breaks:* real editors understand what they read; the model is doing statistics — very good next-word prediction, not comprehension.
+One line to carry out of here: **a transformer is a big team that reads the whole sentence at once and, round after round, each member checks the words that matter and adds what it knows — until the room settles on the next word.** Where the picture leaks: real readers understand what they read; the model is running statistics — extremely good next-word prediction, not comprehension.
 
 ## The anatomy: how the pieces become a model
 

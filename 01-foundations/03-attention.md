@@ -8,17 +8,15 @@ Go back to the sentence from the transformers lesson: "The trophy wouldn't fit i
 
 That word — *selectively* — is the whole game. Attention is not "each word sees all the others." It's "each word decides how much of each other word to let in."
 
-## The one analogy to remember
+## Every word runs a search
 
-**The picture:** A crowded, noisy cocktail party. To make sense of someone saying "he did it," your brain instantly turns up the volume on the few voices that matter and mutes everyone else.
+Take the sentence the last section left hanging: "The trophy wouldn't fit in the suitcase because **it** was too big." The word *it* has a problem — which noun does it stand for? — so it runs a search.
 
-**The mapping:** your shifting focus = attention; each other guest speaking = another word in the sentence; how loud you let each voice be = that word's attention weight; the meaning you piece together = the word's new, context-aware representation.
+*It* types a query: roughly, "I'm a pronoun; which concrete noun here could I be pointing at?" Every other word has posted a listing whose title says what it can offer — *trophy* and *suitcase* both advertise "I'm a concrete noun a pronoun could refer to," while *the* and *because* advertise nothing that matches. The search ranks the hits — *trophy* .7, *suitcase* .2, *big* a little, *the* and *because* ≈ 0 — and *it* pulls in the *contents* of the top hits, blended by their rank. Its new, in-context meaning becomes mostly "trophy," with a trace of "suitcase."
 
-**Why it holds:** the "cocktail-party effect" is a real, named phenomenon — selectively weighting many simultaneous inputs by relevance — which is mechanically what attention does: it scores every other word and blends them by weight. The essence (amplify the relevant, mute the rest, to resolve meaning) is identical, not just a mood.
+The catch that makes it attention and not just a search box: every word runs this same search at the same time, and each word is simultaneously *typing a query* and *posting its own listing* for everyone else's searches. Three things do all the work, and they run through the rest of this lesson: the **query** (what a word is looking for), the **key** (the listing it advertises), and the **value** (the contents that flow in when it's picked).
 
-**Say it like this:** "Attention is the cocktail-party trick — for each word, the model turns up the few other words that matter and tunes out the rest."
-
-*Where it breaks:* at a party you can only track a couple of voices; the model weighs *every* word at once — which is also why long inputs get expensive.
+One line to carry out of here: **attention is every word running a search — matching what it's looking for against what every other word advertises, then pulling in the contents of the best matches, blended by how well they matched.** Where the picture leaks: in a real search the searcher and the documents are separate things, but here every word is both at once — searcher and document — and it's searching only the handful of words in front of it, not a standing library.
 
 ## Query, key, value — the sharpest intuition
 
@@ -28,7 +26,7 @@ The mechanism is usually explained with three roles, and they map cleanly onto s
 - **Key** — *what do I offer?* Every word advertises a key — a label saying what kind of information it can provide. *Trophy* and *suitcase* offer keys that say "I'm a concrete noun that a pronoun could point to."
 - **Value** — *what do I actually carry?* If a word gets picked, this is the content that flows into the asking word.
 
-The clean analogy: it's a **search**. Your query is what you type in; every document has a key (its title, how it indexes itself); the value is the document's actual contents. Attention matches each word's query against every word's key to decide relevance, then pulls in the values of whatever matched, weighted by how well it matched.
+This is the search from the analogy, now named: the query is what a word types in, the key is the listing every word advertises, the value is the contents that flow in when a listing matches. Attention matches each word's query against every word's key to decide relevance, then pulls in the values of whatever matched, weighted by how well it matched.
 
 > [!NOTE]
 > **Vector** — query, key, and value are each a *vector* (an ordered list of numbers; see the [ML vocabulary primer](../primers/ml-vocabulary.md)). Here, just hold that each word becomes a handful of numbers, and closeness between two of them means "related in meaning." Where those numbers come from is its own topic — see [Embeddings](02-embeddings.md).

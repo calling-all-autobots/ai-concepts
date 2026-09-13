@@ -8,17 +8,32 @@ Two obvious options both fail. Give every **whole word** its own number, and you
 
 Tokenization is the compromise that threads that needle, and the compromise is the whole point of this lesson. The list it works from is the model's **vocabulary** — the fixed set of all the distinct chunks a given model knows how to turn into numbers, decided once before training and then frozen. Each entry has an ID number, a typical modern vocabulary runs roughly 50,000 to 200,000 entries, and everything the model ever reads or writes is assembled out of that fixed set.
 
-## The one analogy to remember
+## The model reads the way you do
 
-**The picture:** A box of LEGO bricks. Nobody sells a unique pre-made piece for every object you might build — you get a standard set of bricks and snap them together to make anything, including things the set was never designed for.
+You don't spell out "the" or "because" — you take them in whole, at a glance. But hand you a surname you've never seen — *Zbigniew* — and you can't glance it; you break it into smaller pieces you *do* recognize and sound it out. Two modes, and which one you use depends only on how often you've met the word: whole-shape for the familiar, break-into-familiar-pieces for everything else.
 
-**The mapping:** a brick = a token (a reusable word-piece); the box of brick types = the vocabulary; snapping bricks into a shape = assembling tokens into a word; a rare or brand-new word = just more bricks snapped together.
+A tokenizer does the identical thing. Watch it segment one sentence:
 
-**Why it holds:** it's the actual design tradeoff, not a decoration. A model can't keep a unique token for every possible word — the vocabulary would be impossibly huge and still helpless against words it never saw — so it does exactly what LEGO does: standardize a manageable set of reusable pieces that recombine to cover an unlimited space, unseen words included. "Reusable pieces over an infinite space" *is* why subword tokenization exists.
+> My dog Zbigniew loves strawberries.
 
-**Say it like this:** "The model doesn't read whole words — it reads in LEGO bricks, a fixed set of word-pieces it snaps together to build any word, even ones it's never seen."
+```mermaid
+flowchart LR
+  A["My"] --> A1["[My]"]
+  B["dog"] --> B1["[dog]"]
+  C["Zbigniew<br/>(never seen)"] --> C1["[Zb][ig][nie][w]"]
+  D["loves"] --> D1["[loves]"]
+  E["strawberries"] --> E1["[straw][berries]"]
+```
 
-*Where it breaks:* real LEGO bricks are tidy and visible; token boundaries are statistical and often land in odd spots mid-word (`unhappiness` → `un` + `happi` + `ness`), so don't picture clean syllables.
+- **My · dog · loves** — common, so each is a single token, the way you read them in one glance.
+- **Zbigniew** — rare, so it shatters into little pieces — the same move you made sounding it out.
+- **strawberries** — not rare enough for its own token, not unknown either: it lands in the middle as `straw` + `berries`.
+
+Nobody had to memorize *Zbigniew* to handle it, and the model needed no token for it either: both of you cover an unlimited space of words with a *bounded* set of familiar pieces, falling back to smaller ones whenever a word is unfamiliar. That is the entire trade tokenization exists to win — total coverage at a fixed vocabulary size — and *frequency* is what sorts a word into "known on sight" versus "sound it out." For you it's how often you've read it; for the tokenizer it's how often it appeared in the text the vocabulary was built from.
+
+The same picture explains the model's most notorious quirk. When you read *strawberries* as `straw` + `berries`, you never actually looked at the letters — you caught the two chunks and moved on. Ask yourself how many r's it has without re-reading, and you'll hesitate. The model lives in that spot *permanently*: its smallest visible unit is the chunk, so the individual letters are buried inside tokens it can't easily inspect. "Strawberry has two r's" isn't a reasoning failure — it's the same shape-not-letters reading you just did, and no cleverer prompt reliably fixes a limit that comes from what the model can *see*.
+
+The one line to carry out of here: **the model reads like you do — common words on sight, unfamiliar ones sounded out from smaller pieces — which is exactly why it can handle a word it's never seen, and why it can't reliably count the letters inside one.** The only place the analogy leaks: your reading chunks follow *pronunciation*, but token boundaries follow raw *frequency*, so they often cut mid-syllable — `un` + `happi` + `ness`, not tidy syllables.
 
 ## A token is a subword chunk, not a word
 
@@ -64,7 +79,7 @@ The sayable framing: **token count, not word count, is what you're billed for an
 
 One of the most reliably confusing model behaviours — miscounting the letters in a word, fumbling to reverse a string, insisting "strawberry" has two r's — traces directly back to tokenization, and being able to explain it is a strong signal you understand what the model actually sees.
 
-The model never sees letters. It sees token IDs. If "strawberry" arrives as a couple of chunks like `straw` + `berry`, the individual letter "r" is not a unit the model has direct access to — it's buried *inside* tokens, the way the individual grains are hidden once flour has been baked into a loaf. Asking the model to count the r's is asking it to report on something below its own perceptual grain. It can often get there by reasoning, but it's working against the representation, not with it. The same root cause explains why spelling a word backwards, counting characters, or doing character-level edits are unreliable: those are all letter-level operations on a model whose atoms are subword chunks.
+The model never sees letters. It sees token IDs. If "strawberry" arrives as a couple of chunks like `straw` + `berry`, the individual letter "r" is not a unit the model has direct access to — it's buried *inside* tokens, below the smallest unit the model can see. Asking it to count the r's is asking it to report on something under its own perceptual grain. It can often get there by reasoning, but it's working against the representation, not with it. The same root cause explains why spelling a word backwards, counting characters, or doing character-level edits are unreliable: those are all letter-level operations on a model whose atoms are subword chunks.
 
 The sharp framing for an interview: **these aren't reasoning failures, they're perceptual ones — the model is being asked about letters when its smallest visible unit is a multi-letter token.** That reframes a "the model is dumb" observation into "the model's input representation doesn't expose that level of detail," which is a very different and more accurate diagnosis.
 

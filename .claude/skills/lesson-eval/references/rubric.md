@@ -38,8 +38,13 @@ FAIL if the lesson describes a relationship between entities (a pipeline, hierar
 ## 12. Alert boxes used sparingly
 FAIL if alert boxes are overused — e.g. ordinary prose wrapped in `[!NOTE]`, a stack of boxes used as the main content vehicle, or a box for a term that a one-clause inline gloss would cover. Boxes are a spotlight; a glossary/vocabulary page uses none. (The per-answer rationale boxes in the interview section are required and do not count as overuse.)
 
-## 13. One memorable analogy
-FAIL if the lesson lacks a dedicated "The one analogy to remember" section, or if it has one but the analogy is technical rather than everyday, has no explicit mapping, lacks a **"Why it holds"** line tying the scene to the real mechanism/design reason, or lacks a sayable one-liner. The "Why it holds" justification is required — without it the analogy is arbitrary and the learner can't defend it. More than one canonical analogy competing for the section also fails — the point is a single sticky picture.
+## 13. One analogy, shown on a concrete instance
+The analogy section sits right after the problem framing, under a heading titled for the idea (not "The one analogy to remember"). FAIL if:
+- **It's tabulated, not shown.** The analogy is asserted as a `thing = part-of-concept` mapping list (or labeled `**The picture:** / **The mapping:** / **Why it holds:** / **Say it like this:**` sub-parts) rather than *demonstrated by running the lesson's own worked example through the scene*. Showing the mapping on a concrete instance is required; a correspondence list or the labeled-scaffold format is an automatic fail — it reads as a worksheet and is the main reason analogies don't land.
+- **A second metaphor rescues the mechanism.** A different analogy appears later in the lesson to carry the core mechanism (e.g. a "baked loaf" for letter-counting, "it's a search" for query/key/value). That is proof the chosen analogy doesn't reach the mechanism — it must be replaced by one that does, not supplemented. Two pictures competing to *be* the concept fails.
+- The analogy is technical rather than everyday, or there's no sayable one-liner woven into the prose.
+
+Not required (and no longer): an explicit "Why it holds" line. Faithfulness to the mechanism must instead be *evident from the worked instance* — if running the example through the scene shows why it holds, the job is done.
 
 ## 14. Every interview answer has a rationale
 FAIL if any interview question lacks a `> [!TIP]` rationale explaining *why* the answer is the strong move — the trap it avoids, what it signals, the reasoning behind it. A transcript with the answer but no rationale is incomplete; the rationale is what makes the answer understood rather than memorized.

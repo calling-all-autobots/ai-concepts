@@ -89,6 +89,12 @@ New to the vocabulary? Start with the [ML vocabulary primer](primers/ml-vocabula
 54. [Data moats and feedback loops](11-product-strategy/54-data-moats.md)
 55. [The iron triangle](11-product-strategy/55-iron-triangle.md)
 
+### 12. Agent engineering — how you wield the model
+56. [Tool design](12-agent-engineering/56-tool-design.md)
+57. Harness engineering *(coming)*
+58. Loop engineering *(coming)*
+59. Memory architecture *(coming)*
+
 ---
 
 ## Appendix — Dev surfaces (usage tier)

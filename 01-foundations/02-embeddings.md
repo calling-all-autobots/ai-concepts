@@ -9,41 +9,31 @@ Embeddings are the fix. The idea is to turn each piece of content — a word, a 
 > [!NOTE]
 > **Vector** — an ordered list of numbers (see the [ML vocabulary primer](../primers/ml-vocabulary.md)). An embedding *is* a vector: picture a 2-number vector as a point on a graph (an x and a y), then scale that up to hundreds or thousands of numbers — a point in a space with that many dimensions. We can't visualize 1,000 dimensions, but "how close are two points" works exactly the same no matter how many there are.
 
-## The one analogy to remember
+## Meaning becomes a place on a map
 
-**The picture:** A giant city map where every word or sentence has an address, and things that mean similar things live in the same neighborhood — the coffee shops cluster on one street, the hardware stores in another district.
+Give every word an address on a map, and lay the map out so that things meaning similar things sit in the same neighborhood. *Doctor* and *physician* land on the same block. *Nurse* is a few doors down — same medical district. *Banana* is clear across town in the groceries quarter, nowhere near any of them.
 
-**The mapping:** an address (a point) = an embedding; a neighborhood = a group of similar meanings; distance across town = how different two things are; a consistent direction (e.g. "head toward royalty") = a relationship like king→queen.
+Watch what that buys you. To ask "is *physician* related to *doctor*?" you no longer compare their spellings — by spelling, *physician* is as far from *doctor* as it is from *banana*. You measure the walk between their addresses. Short walk, closely related; cross-town, unrelated. Relatedness has turned into distance — and distance is something a computer can actually measure.
 
-**Why it holds:** an embedding's entire job is to turn meaning into *position*, so that nearness encodes relatedness — and a map is the one everyday object where "how close two things are" literally means "how related they are." It carries the load-bearing idea exactly (similarity = distance), and even the arithmetic (king − man + woman ≈ queen) maps, because consistent directions on a map mean consistent things.
-
-**Say it like this:** "Embeddings put every word on a map of meaning, where synonyms are neighbors and you measure how related two things are by how close they sit."
-
-*Where it breaks:* a real map is 2D so you can point to a spot; an embedding space has hundreds of dimensions, so no single coordinate is readable — only the relative distances mean anything.
-
-## Meaning becomes a place in space
-
-The core move is deceptively simple: assign every concept a set of coordinates so that **distance encodes dissimilarity**. "Dog" and "puppy" land near each other. "Dog" and "wolf" are a bit further. "Dog" and "tax return" are in a completely different neighborhood. The list of numbers itself is meaningless to a human — no single number is "the friendliness dimension" you could read off — but the *geometry* of the whole space is deeply meaningful. Closeness means relatedness.
+The map encodes *relationships*, too, not just neighborhoods. The walk from *man* to *woman* — some fixed direction and distance, say three blocks north — turns out to be the same walk that takes you from *king* to *queen*:
 
 ```mermaid
 flowchart LR
-  subgraph royalty["royalty cluster"]
-    K[king] --- Q[queen]
-  end
-  subgraph pets["pets cluster"]
-    C[cat] --- D[dog]
-  end
-  TR["tax return"]
-  royalty -. "far apart<br/>(unrelated)" .- pets
-  royalty -. far .- TR
-  pets -. far .- TR
+  man -- "same walk →" --> woman
+  king -- "same walk →" --> queen
 ```
 
-Nearby (the solid links) means related meaning; the dotted gaps mean dissimilarity. King and queen sit together, cat and dog sit together, and "tax return" is off in its own region far from both — distance *is* the measure of how unrelated things are.
+Nobody drew a "gender street" onto the map. It's there because *man/woman* and *king/queen* get used in parallel ways in text, so the space arranged them in parallel — which is exactly why the famous "king − man + woman ≈ queen" lands you on *queen*.
 
-This is why the flashy demo everyone quotes works: **king − man + woman ≈ queen**. Because the space is arranged by meaning, directions in it turn out to correspond to *relationships*. The step you take to get from "man" to "woman" — a particular direction and distance — is roughly the same step that gets you from "king" to "queen." So if you take the coordinates of "king," subtract the "man" direction, and add the "woman" direction, you land almost exactly on "queen." The model was never told about gender or royalty. That structure *emerged* from seeing how words are used, because words with similar meanings appear in similar contexts, and the model was trained to put things that appear in similar contexts near each other.
+One line to carry out of here: **embeddings put every piece of content at an address on a map of meaning, where synonyms are neighbors and you judge how related two things are by how far apart they sit.** Where the picture leaks: a real map is 2D, so you can point at a spot and read its cross-streets; an embedding map has hundreds of dimensions, so no single coordinate is readable on its own — only the walks *between* addresses carry meaning.
 
-The reason "similar context" produces "similar meaning" is that a word is known by the company it keeps. "Doctor" and "physician" show up around the same neighboring words (patient, hospital, prescribe), so a model learning to predict context pushes them to nearly the same location. Meaning is inferred from usage, not from a dictionary.
+## A word is known by the company it keeps
+
+The map doesn't come pre-drawn — so where do the addresses come from? From usage, by one rule: a model learns to place words that appear in similar contexts near each other. "Doctor" and "physician" show up around the same neighboring words — patient, hospital, prescribe — so a model trained to predict context pushes them to nearly the same address. Meaning is inferred from how words are used, never from a dictionary.
+
+That same rule is why the *king → queen* walk from the analogy exists at all. Because the space is arranged by usage, consistent relationships become consistent directions: "man/woman" and "king/queen" are used analogously in text, so the space places them in parallel, and the step between one pair is the step between the other. The model was told nothing about gender or royalty — the structure *emerged* from usage alone. Which is also why the arithmetic reproduces bias for the identical reason: "doctor − man + woman ≈ nurse" is the same mechanism faithfully mirroring a correlation in the data.
+
+One caution the map makes easy to forget: no single number in the vector is readable on its own — there's no "friendliness dimension" you could look up. The meaning lives in the *geometry* — the relative positions and directions among many points — not in any one coordinate.
 
 The sharp framing to carry: **an embedding turns meaning into geometry, so that judging similarity becomes measuring distance.** That one sentence is the whole concept.
 

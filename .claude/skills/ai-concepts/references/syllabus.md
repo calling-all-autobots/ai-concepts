@@ -1,4 +1,4 @@
-# AI Concepts Syllabus — 55 topics, 11 categories
+# AI Concepts Syllabus — 59 topics, 12 categories
 
 Each line: global number, topic, and its lesson file path under `E:\ai-concepts`. **Ordering is dependency-clean** — within every category, a lesson only relies on earlier ones, so a newcomer never meets a term before it's taught. Write them in order by default; jump on request. Link related lessons across categories.
 
@@ -79,6 +79,12 @@ Each line: global number, topic, and its lesson file path under `E:\ai-concepts`
 54. Data moats and feedback loops — `11-product-strategy/54-data-moats.md`
 55. The iron triangle (cost / latency / quality) — `11-product-strategy/55-iron-triangle.md`
 
+## 12-agent-engineering
+56. Tool design — `12-agent-engineering/56-tool-design.md`
+57. Harness engineering — `12-agent-engineering/57-harness-engineering.md`
+58. Loop engineering — `12-agent-engineering/58-loop-engineering.md`
+59. Memory architecture — `12-agent-engineering/59-memory-architecture.md`
+
 ## What changed vs. the original order (dependency-clean reorder)
 - **Foundations:** tokens → embeddings → attention → transformers → context windows → pretraining (was transformers-first, which forward-referenced tokens/embeddings).
 - **Model behavior:** fine-tuning → PEFT → LoRA (family before the flagship method), then instruction tuning → RLHF → DPO (alignment, simplest first), then distillation → quantization → MoE (efficiency).
@@ -87,3 +93,4 @@ Each line: global number, topic, and its lesson file path under `E:\ai-concepts`
 - **Prompting:** prompt engineering → few-shot → KV caching (mechanism) → prompt caching (the productized feature built on it).
 - **Agents:** tool calling → MCP → agentic systems → agent memory → planning → multi-agent (primitive → standard → loop → state → planning → many agents).
 - Categories 7–11 were already dependency-clean; order unchanged.
+- **Agent engineering (new, 12):** the "how you wield the model" cluster — tool design (craft on top of #32 tool calling) → harness engineering (the scaffolding that runs the agent) → loop engineering (control flow inside the harness) → memory architecture (systems-level state design, building on #35 agent memory). Placed as its own category so the four are studied together rather than scattered through 06-agents.

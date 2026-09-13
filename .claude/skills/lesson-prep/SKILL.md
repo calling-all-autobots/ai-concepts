@@ -36,37 +36,22 @@ A method for writing study lessons that make a learner sound genuinely knowledge
 Follow the template in `references/lesson-template.md`. Every lesson file contains, in order:
 
 1. A short framing of **the problem the concept solves** (open with the pain, not the term).
-2. **The one analogy to remember** — a single everyday scene the learner can memorize and reuse to explain the concept to *anyone*. See below.
+2. **The analogy, shown** — a single everyday scene, *demonstrated on a concrete instance* (not a mapping list), under a heading titled for the idea. See below.
 3. The **explanation as discourse** — the why, the mechanism at a conceptual level, the tradeoffs. Give prerequisites a short primer inline; add a Mermaid diagram wherever entities relate.
 4. **Summary / Points to Remember** — the handful of things worth memorizing, phrased as sayable talking points.
 5. **Interview Questions That Stump People** — non-obvious only, written as full conversation transcripts. See `references/interview-questions.md`.
 
-## The one analogy to remember
+## The analogy (one picture, shown)
 
 Each lesson carries exactly **one** memorable analogy — the picture the learner actually carries out of the room and uses to explain the concept to a friend, a stakeholder, or an interviewer. It sits right after the problem framing so it anchors everything that follows. What makes it stick:
 
-- **One, not many.** A single canonical analogy per concept; scattering three dilutes the one they'll remember. (Small illustrations may still appear in the prose, but this section names *the* one.)
-- **Everyday and concrete.** A scene from ordinary life — a whiteboard, LEGO bricks, a cocktail party — not another technical metaphor.
-- **Explicit mapping.** Spell out what maps to what, so it teaches rather than just charms.
-- **Why it holds — the load-bearing part.** One sentence tying the everyday scene to the *actual mechanism or design reason*, so the learner understands why the analogy is faithful rather than arbitrary. Without this the analogy is just rambling words the learner can't defend. This is the piece that makes it stick.
-- **A one-liner they can say** to a non-technical person who'll instantly get it.
+- **One, and it must reach the mechanism.** A single canonical analogy that the *deep sections build on*. The test: if a later section has to introduce a second metaphor to explain the core mechanism (e.g. a "baked loaf" for why a model can't count letters, or "it's a search" for query/key/value), the chosen analogy is **wrong** — it doesn't reach the mechanism. The fix is to replace it with the one that does, never to add the second metaphor. Small throwaway illustrations in prose are fine; two pictures competing to *be the concept* is the failure.
+- **Everyday and concrete.** A scene from ordinary life — reading, a map, a search box — not another technical metaphor.
+- **Shown, not tabulated — this is the load-bearing rule.** Demonstrate the analogy by *running it on the same concrete example the lesson uses*, so the correspondence happens in front of the reader. A bulleted `thing = part-of-concept` mapping list is **banned**: it asserts the correspondence instead of teaching it, and it's the single biggest reason an analogy fails to land. Walk one real instance through the scene and let the mapping reveal itself.
+- **A one-liner they can say** to a non-technical person who'll instantly get it — woven into the prose, not labeled.
 - **Honest about the seams.** If the analogy breaks somewhere important, note it in one line — memorable-but-misleading is worse than none.
 
-Format (plain prose with bold labels, not an alert box):
-
-```markdown
-## The one analogy to remember
-
-**The picture:** <the everyday scene, named and vivid, 1–2 sentences>.
-
-**The mapping:** <thing in scene> = <part of concept>; <thing> = <part>; …
-
-**Why it holds:** <one sentence tying the scene to the real mechanism / design reason — why this analogy is faithful, not decorative>.
-
-**Say it like this:** "<one sentence a layperson instantly understands>"
-
-*Where it breaks:* <one line, only if there's a genuinely misleading seam>.
-```
+Write it as **flowing prose under a descriptive section heading** — no labeled sub-parts. Do **not** use `**The picture:** / **The mapping:** / **Why it holds:** / **Say it like this:** / *Where it breaks:*` headers; that fill-in-the-blank scaffold reads as a worksheet and is what made earlier lessons feel mechanical. The section still does all those jobs — paint the scene, show it on a worked instance, land the sayable line, flag the seam — but as teaching prose a person would actually speak. Title the section for the idea (e.g. "The model reads the way you do", "Meaning becomes a place on a map", "Every word runs a search"), not "The one analogy to remember".
 
 ## Alert boxes: use sparingly
 

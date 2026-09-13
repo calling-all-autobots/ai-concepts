@@ -9,15 +9,22 @@ Use this shape for every lesson. Headings are fixed; prose is yours. Keep it dis
 Open with the pain or the question nobody could answer before this concept
 existed. Make the reader feel why it was needed. No "in this lesson".
 
-## The one analogy to remember
+## <Title the section for the idea — e.g. "The model reads the way you do">
 One memorable everyday scene the learner can reuse to explain the concept to
-anyone. Plain prose with bold labels (not an alert box):
+anyone — written as flowing prose, **not** labeled sub-parts. Do NOT use
+`**The picture:** / **The mapping:** / **Why it holds:** / **Say it like this:**`
+headers; that worksheet scaffold is banned. Instead:
 
-**The picture:** <everyday scene, named and vivid>.
-**The mapping:** <thing> = <part of concept>; <thing> = <part>; …
-**Why it holds:** <one sentence tying the scene to the real mechanism / design reason — why it's faithful, not decorative>.
-**Say it like this:** "<one sentence a layperson instantly gets>"
-*Where it breaks:* <one line, only if there's a genuinely misleading seam>.
+- Paint the everyday scene in a sentence or two.
+- **Show it on a concrete instance** — run the same worked example the lesson
+  uses through the scene so the correspondence appears in front of the reader.
+  A `thing = part-of-concept` mapping list is banned; demonstrate, don't tabulate.
+- Land a sayable one-liner in the prose.
+- Note the one place the analogy leaks, if there's a genuinely misleading seam.
+
+The analogy must reach the mechanism: if a later section needs a *second*
+metaphor to explain the core mechanism, this analogy is wrong — replace it, don't
+add the second one.
 
 ## <Discourse body — one or more substantive sections>
 Explain the concept as an expert would in conversation: the core insight, the
@@ -52,7 +59,7 @@ clarify-back convention. Stumpers only — no "what is X".
 
 ## Checklist before you consider a lesson done
 - Would the reader survive a "why?" and a "what breaks?" follow-up? If not, go deeper.
-- Exactly one memorable everyday analogy, with an explicit mapping and a sayable one-liner.
+- Exactly one memorable everyday analogy, **shown on a concrete worked instance** (no mapping list), in prose with no labeled sub-parts, and a sayable one-liner. It reaches the mechanism — no second metaphor rescues it later.
 - Every acronym expanded on first use; prerequisites primed inline, with a `[!NOTE]` box only where one truly earns it (few per lesson).
 - A Mermaid diagram appears wherever entities genuinely relate.
 - Nothing taught that belongs to another lesson (linked instead).
