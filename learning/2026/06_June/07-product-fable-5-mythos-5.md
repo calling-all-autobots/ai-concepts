@@ -29,7 +29,7 @@ The headline capability comes bundled with a new failure mode your code must han
 3. Confirm export/eligibility rules for your users given the national-security restrictions.
 
 ## Connects to
-- [guardrails](../../../08-safety-trust/41-guardrails.md)
-- [responsible AI](../../../08-safety-trust/44-responsible-ai.md)
-- [tokenization](../../../01-foundations/01-tokenization.md)
-- [model ID & versioning](../../../dev-surfaces/07-model-id-versioning.md)
+- [guardrails](../../../safety-trust/guardrails.md)
+- [responsible AI](../../../safety-trust/responsible-ai.md)
+- [tokenization](../../../foundations/tokenization.md)
+- [model ID & versioning](../../../dev-surfaces/model-id-versioning.md)

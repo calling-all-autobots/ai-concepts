@@ -28,7 +28,7 @@ Without persistence, every code step is a cold start: the model has to re-import
 3. Split any step that could exceed 90 seconds into smaller cells.
 
 ## Connects to
-- [tool calling](../../../06-agents/32-tool-calling.md)
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [SDK](../../../dev-surfaces/03-sdk.md)
-- [inference optimization](../../../10-production-ops/49-inference-optimization.md)
+- [tool calling](../../../agents/tool-calling.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [SDK](../../../dev-surfaces/sdk.md)
+- [inference optimization](../../../production-ops/inference-optimization.md)

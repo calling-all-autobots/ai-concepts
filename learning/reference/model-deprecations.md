@@ -41,4 +41,4 @@ A pinned model ID is a dependency with an expiry date, and the failure is silent
 4. **Re-run your eval suite before migrating**, not after the incident — pin the model version and treat the upgrade as a tested change.
 
 ## Connects to
-[Model ID / versioning](../../dev-surfaces/07-model-id-versioning.md) · [Regression testing](../../09-evaluation/47-regression-testing.md) · [Production architecture](../../10-production-ops/48-production-architecture.md) · [Cost & unit economics](../../10-production-ops/51-cost-unit-economics.md)
+[Model ID / versioning](../../dev-surfaces/model-id-versioning.md) · [Regression testing](../../evaluation/regression-testing.md) · [Production architecture](../../production-ops/production-architecture.md) · [Cost & unit economics](../../production-ops/cost-unit-economics.md)

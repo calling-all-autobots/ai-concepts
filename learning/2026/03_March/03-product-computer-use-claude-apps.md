@@ -22,7 +22,7 @@ This is the general-purpose escape hatch for the long tail of software that has 
 Try it on low-stakes, API-less workflows in a throwaway or non-sensitive context. Keep secrets and financial/PII data off the screen while it runs. Prefer building or wiring an MCP/connector for anything you will automate repeatedly.
 
 ## Connects to
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [tool calling](../../../06-agents/32-tool-calling.md)
-- [MCP](../../../06-agents/33-mcp.md)
-- [AI security](../../../08-safety-trust/42-ai-security.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [tool calling](../../../agents/tool-calling.md)
+- [MCP](../../../agents/mcp.md)
+- [AI security](../../../safety-trust/ai-security.md)

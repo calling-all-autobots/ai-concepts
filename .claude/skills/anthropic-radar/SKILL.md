@@ -178,7 +178,7 @@ nothing to do yet, say why and what would trigger action.>
 ## Connects to
 <Relevant study-book lesson links. A week nugget sits FOUR levels below the repo
 root (`learning/<year>/<month>/<week>/`), so lesson links use `../../../../`,
-e.g. [prompt caching](../../../../05-prompting/31-prompt-caching.md).>
+e.g. [prompt caching](../../../../prompting/prompt-caching.md).>
 ```
 
 Target ~250–450 words per nugget — long enough to stand alone, tight enough to

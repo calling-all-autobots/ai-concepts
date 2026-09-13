@@ -28,4 +28,4 @@ Static API keys are the single most common way LLM credentials leak — committe
 - Set short token lifetimes and route the audit trail into your existing logging/SIEM.
 
 ## Connects to
-- [API key](../../../dev-surfaces/05-api-key.md) · [AI security](../../../08-safety-trust/42-ai-security.md) · [privacy & PII](../../../08-safety-trust/43-privacy-pii.md) · [production architecture](../../../10-production-ops/48-production-architecture.md)
+- [API key](../../../dev-surfaces/api-key.md) · [AI security](../../../safety-trust/ai-security.md) · [privacy & PII](../../../safety-trust/privacy-pii.md) · [production architecture](../../../production-ops/production-architecture.md)

@@ -31,7 +31,7 @@ Anyone building agents, extraction pipelines, or tool-calling flows previously w
 - Keep JSON schemas and tool sets stable across calls to benefit from grammar + prompt caching; expect a one-time latency hit per new schema.
 
 ## Connects to
-- [structured outputs](../../../03-reasoning-generation/20-structured-outputs.md)
-- [tool calling](../../../06-agents/32-tool-calling.md)
-- [model ID versioning](../../../dev-surfaces/07-model-id-versioning.md)
-- [regression testing](../../../09-evaluation/47-regression-testing.md)
+- [structured outputs](../../../reasoning-generation/structured-outputs.md)
+- [tool calling](../../../agents/tool-calling.md)
+- [model ID versioning](../../../dev-surfaces/model-id-versioning.md)
+- [regression testing](../../../evaluation/regression-testing.md)

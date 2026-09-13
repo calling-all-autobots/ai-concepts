@@ -24,7 +24,7 @@ Going GA together: **computer use**, the **Files API**, the **Agent Skills / Ski
 - Set `allowed_domains` on production web agents and an org-level ceiling in Console → Privacy.
 
 ## Connects to
-- [tool calling](../../../06-agents/32-tool-calling.md)
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [AI security](../../../08-safety-trust/42-ai-security.md)
-- [model ID & versioning](../../../dev-surfaces/07-model-id-versioning.md)
+- [tool calling](../../../agents/tool-calling.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [AI security](../../../safety-trust/ai-security.md)
+- [model ID & versioning](../../../dev-surfaces/model-id-versioning.md)

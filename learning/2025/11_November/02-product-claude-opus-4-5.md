@@ -28,6 +28,6 @@ Two things move together here: a capability record *and* a price cut. Crossing 8
 - For long agent tasks, enable the memory tool + context compaction rather than hand-rolling context management.
 
 ## Connects to
-- [reasoning models](../../../03-reasoning-generation/18-reasoning-models.md)
-- [agent memory](../../../06-agents/35-agent-memory.md)
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
+- [reasoning models](../../../reasoning-generation/reasoning-models.md)
+- [agent memory](../../../agents/agent-memory.md)
+- [agentic systems](../../../agents/agentic-systems.md)

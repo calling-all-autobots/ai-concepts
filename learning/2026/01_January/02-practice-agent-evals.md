@@ -33,8 +33,8 @@ Together they reframe evaluation for the agent era: for machines, stop grading t
 - Redesign any coding take-home toward novel, judgment-testing problems; publish/rotate tasks as models saturate them.
 
 ## Connects to
-- [evaluation methods](../../../09-evaluation/45-evaluation-methods.md)
-- [benchmarks](../../../09-evaluation/46-benchmarks.md)
-- [regression testing](../../../09-evaluation/47-regression-testing.md)
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [observability](../../../10-production-ops/50-observability.md)
+- [evaluation methods](../../../evaluation/evaluation-methods.md)
+- [benchmarks](../../../evaluation/benchmarks.md)
+- [regression testing](../../../evaluation/regression-testing.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [observability](../../../production-ops/observability.md)

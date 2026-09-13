@@ -23,6 +23,6 @@ The long-running-agent workflow has a babysitting problem: you kick off a multi-
 - Don't design team processes around it yet (no Team/Enterprise support at launch, single-user).
 
 ## Connects to
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [planning & orchestration](../../../06-agents/36-planning-orchestration.md)
-- [the SDK & dev surfaces](../../../dev-surfaces/03-sdk.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [planning & orchestration](../../../agents/planning-orchestration.md)
+- [the SDK & dev surfaces](../../../dev-surfaces/sdk.md)

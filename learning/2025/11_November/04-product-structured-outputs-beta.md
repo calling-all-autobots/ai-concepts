@@ -33,6 +33,6 @@ Most "get JSON out of an LLM" code is defensive scaffolding: prompt begging, par
 - Since it's now GA (Feb 2026), plan to make structured outputs your default for machine-consumed responses — but retain value-level validation.
 
 ## Connects to
-- [structured outputs](../../../03-reasoning-generation/20-structured-outputs.md)
-- [tool calling](../../../06-agents/32-tool-calling.md)
-- [sampling & decoding](../../../03-reasoning-generation/16-sampling-decoding.md)
+- [structured outputs](../../../reasoning-generation/structured-outputs.md)
+- [tool calling](../../../agents/tool-calling.md)
+- [sampling & decoding](../../../reasoning-generation/sampling-decoding.md)

@@ -28,7 +28,7 @@ The sticker price fell ~33% on input and ~33% on output, but if your workload is
 3. Decide explicitly on thinking: leave it on for hard reasoning, disable it for cheap extraction/classification to control output tokens.
 
 ## Connects to
-- [tokenization](../../../01-foundations/01-tokenization.md)
-- [cost & unit economics](../../../10-production-ops/51-cost-unit-economics.md)
-- [model ID & versioning](../../../dev-surfaces/07-model-id-versioning.md)
-- [reasoning models](../../../03-reasoning-generation/18-reasoning-models.md)
+- [tokenization](../../../foundations/tokenization.md)
+- [cost & unit economics](../../../production-ops/cost-unit-economics.md)
+- [model ID & versioning](../../../dev-surfaces/model-id-versioning.md)
+- [reasoning models](../../../reasoning-generation/reasoning-models.md)

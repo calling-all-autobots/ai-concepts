@@ -26,7 +26,7 @@ Moving tunnel management from the Admin API to the Claude API and scoping it at 
 2. For any agent needing internal-system access, evaluate tunnels as the outbound-only alternative to VPN/inbound firewall rules.
 
 ## Connects to
-- [MCP](../../../06-agents/33-mcp.md)
-- [tool calling](../../../06-agents/32-tool-calling.md)
-- [API endpoint](../../../dev-surfaces/04-api-endpoint.md)
-- [AI security](../../../08-safety-trust/42-ai-security.md)
+- [MCP](../../../agents/mcp.md)
+- [tool calling](../../../agents/tool-calling.md)
+- [API endpoint](../../../dev-surfaces/api-endpoint.md)
+- [AI security](../../../safety-trust/ai-security.md)

@@ -24,6 +24,6 @@ This removes the biggest blocker to Claude Code adoption in regulated and securi
 - Confirm the inference data path separately; self-hosting execution doesn't change where prompts are processed.
 
 ## Connects to
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [production architecture](../../../10-production-ops/48-production-architecture.md)
-- [AI security](../../../08-safety-trust/42-ai-security.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [production architecture](../../../production-ops/production-architecture.md)
+- [AI security](../../../safety-trust/ai-security.md)

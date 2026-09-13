@@ -31,6 +31,6 @@ This is a reusable blueprint for anyone building long-running agents, whether or
 - Provision sandboxes lazily and treat them as disposable; don't pay boot cost for sessions that never touch code execution.
 
 ## Connects to
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [production architecture](../../../10-production-ops/48-production-architecture.md)
-- [agent memory](../../../06-agents/35-agent-memory.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [production architecture](../../../production-ops/production-architecture.md)
+- [agent memory](../../../agents/agent-memory.md)

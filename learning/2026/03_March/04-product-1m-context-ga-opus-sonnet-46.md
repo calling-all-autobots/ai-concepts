@@ -22,7 +22,7 @@ Beta long context carried two taxes: a price multiplier that made big prompts ec
 Re-estimate costs for long-context workloads at the new flat rate before deciding between stuffing context and building retrieval. Use the 600-page media limit for large document/PDF pipelines. Keep RAG for high-QPS or latency-sensitive paths where a huge prompt is wasteful.
 
 ## Connects to
-- [context windows](../../../01-foundations/05-context-windows.md)
-- [RAG](../../../04-retrieval-knowledge/21-rag.md)
-- [cost & unit economics](../../../10-production-ops/51-cost-unit-economics.md)
-- [benchmarks](../../../09-evaluation/46-benchmarks.md)
+- [context windows](../../../foundations/context-windows.md)
+- [RAG](../../../retrieval-knowledge/rag.md)
+- [cost & unit economics](../../../production-ops/cost-unit-economics.md)
+- [benchmarks](../../../evaluation/benchmarks.md)

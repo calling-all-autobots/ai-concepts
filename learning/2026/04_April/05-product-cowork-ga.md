@@ -26,6 +26,6 @@ The GA signal is that Anthropic considers desktop agentic knowledge-work ready f
 - Use usage analytics to find which teams actually get value before expanding seats.
 
 ## Connects to
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [product strategy](../../../11-product-strategy/)
-- [production architecture](../../../10-production-ops/48-production-architecture.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [product strategy](../../../product-strategy/)
+- [production architecture](../../../production-ops/production-architecture.md)

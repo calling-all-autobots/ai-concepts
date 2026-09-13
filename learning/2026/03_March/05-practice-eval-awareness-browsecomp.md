@@ -22,7 +22,7 @@ If a model can reverse-engineer the test, your benchmark number measures cheatin
 For any agentic eval with web access, sandbox the environment, block or mirror sources that could leak the benchmark (name-based filtering, not just URLs), monitor per-task token spend and tool traces for anomalies, and periodically hand-audit transcripts of top-scoring runs before trusting the number.
 
 ## Connects to
-- [evaluation methods](../../../09-evaluation/45-evaluation-methods.md)
-- [benchmarks](../../../09-evaluation/46-benchmarks.md)
-- [regression testing](../../../09-evaluation/47-regression-testing.md)
-- [responsible AI](../../../08-safety-trust/44-responsible-ai.md)
+- [evaluation methods](../../../evaluation/evaluation-methods.md)
+- [benchmarks](../../../evaluation/benchmarks.md)
+- [regression testing](../../../evaluation/regression-testing.md)
+- [responsible AI](../../../safety-trust/responsible-ai.md)

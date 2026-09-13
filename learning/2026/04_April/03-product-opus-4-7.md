@@ -30,6 +30,6 @@ The economics are the story: a real capability jump (SWE-bench Verified crossing
 - Reserve `xhigh`/`max` effort for genuinely hard turns; use lower effort elsewhere to control cost.
 
 ## Connects to
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [agent memory](../../../06-agents/35-agent-memory.md)
-- [structured outputs](../../../03-reasoning-generation/20-structured-outputs.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [agent memory](../../../agents/agent-memory.md)
+- [structured outputs](../../../reasoning-generation/structured-outputs.md)

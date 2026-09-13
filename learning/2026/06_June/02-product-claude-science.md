@@ -27,6 +27,6 @@ This is a product-strategy signal, not a capability signal. Anthropic is moving 
 2. Watch this as a template: expect more Anthropic first-party vertical surfaces, and factor that into build-vs-buy decisions on the platform.
 
 ## Connects to
-- [build vs. buy](../../../11-product-strategy/53-build-vs-buy.md)
-- [data moats](../../../11-product-strategy/54-data-moats.md)
-- [grounding & citations](../../../04-retrieval-knowledge/27-grounding-citations.md)
+- [build vs. buy](../../../product-strategy/build-vs-buy.md)
+- [data moats](../../../product-strategy/data-moats.md)
+- [grounding & citations](../../../retrieval-knowledge/grounding-citations.md)

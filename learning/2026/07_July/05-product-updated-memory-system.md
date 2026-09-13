@@ -28,5 +28,5 @@ A daily summary is lossy and hard to correct: individual facts get averaged out,
 - If you build memory features, treat this as a design pattern: prefer categorized, individually editable entries over a single summarized context.
 
 ## Connects to
-- [Agent memory](../../../06-agents/35-agent-memory.md)
-- [Privacy & PII](../../../08-safety-trust/43-privacy-pii.md)
+- [Agent memory](../../../agents/agent-memory.md)
+- [Privacy & PII](../../../safety-trust/privacy-pii.md)

@@ -26,17 +26,21 @@ Everything lives in `E:\ai-concepts`.
 E:\ai-concepts\
   README.md        ← Table of Contents (linked, read the book from here)
   TRACKER.md       ← change registry: done / left / what changed when
-  primers/         ← standing glossary (e.g. ml-vocabulary.md); never numbered 00
-  01-foundations/ … 11-product-strategy/   ← 11 category folders, numbered 01–11
+  primers/         ← standing glossary (e.g. ml-vocabulary.md)
+  foundations/ … agent-engineering/   ← 12 category folders (no number prefix)
 ```
 
-Lesson files are numbered globally `01`–`55` inside their category folder (e.g. `01-foundations/01-transformers.md`). **Never a `00` prefix.** ToC and Tracker are separate files with separate jobs.
+**Numbering: there is none.** Neither category folders nor lesson files carry a number prefix — a folder is its slug (`foundations/`), a lesson is its slug (`foundations/tokenization.md`). This is deliberate: global numbers used to cascade on every insert/reorder. Two rules follow:
+- **Reading order lives only in the README ToC** (the filesystem sorts alphabetically and does *not* encode order). When you add or move a lesson, fix its position in the ToC.
+- **Refer to a lesson by its title, never a number** — in prose ("see the [Retrieval](../retrieval-knowledge/retrieval.md) lesson"), in the ToC, and in the Tracker (its status table is keyed by category + title). ToC display numbers restart at 1 within each section and are purely presentational.
+
+ToC and Tracker are separate files with separate jobs.
 
 ## The syllabus
-The full 55-topic list, its 11 categories, and the file path for each lesson are in `references/syllabus.md`. Read it to know what to write next and where it goes. Cross-link related lessons; a concept with its own entry is linked, never taught inline in another lesson.
+The full topic list, its 12 categories, and the file path for each lesson are in `references/syllabus.md`. Read it to know what to write next and where it goes. Cross-link related lessons; a concept with its own entry is linked, never taught inline in another lesson.
 
 ## Working rhythm
-1. If the book doesn't exist yet, scaffold `README.md` (ToC), `TRACKER.md`, the 11 folders, and `primers/ml-vocabulary.md` — after the user approves the structure.
+1. If the book doesn't exist yet, scaffold `README.md` (ToC), `TRACKER.md`, the 12 category folders, and `primers/ml-vocabulary.md` — after the user approves the structure.
 2. Write one lesson per turn using lesson-prep.
 3. Run lesson-eval; fix until PASS.
 4. Tick the lesson in both TRACKER.md and README.md; update the progress count.

@@ -23,6 +23,6 @@ This is Anthropic extending the "agent + open protocol" playbook from the digita
 - Otherwise, file this as evidence that Anthropic's protocol strategy (MCP, now MHS) is a durable pattern — expect more "open standard, model-agnostic" moves and factor that into build-vs-buy thinking.
 
 ## Connects to
-- [MCP](../../../06-agents/33-mcp.md)
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [build vs buy](../../../11-product-strategy/53-build-vs-buy.md)
+- [MCP](../../../agents/mcp.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [build vs buy](../../../product-strategy/build-vs-buy.md)

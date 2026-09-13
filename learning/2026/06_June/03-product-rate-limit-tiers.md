@@ -27,6 +27,6 @@ Rate limits, not price, are often the real ceiling on scaling an agentic workloa
 2. If you deferred a Sonnet/Haiku high-volume workload over rate limits, reconsider — the throttle gap is gone.
 
 ## Connects to
-- [rate limits](../../../dev-surfaces/06-rate-limits.md)
-- [cost & unit economics](../../../10-production-ops/51-cost-unit-economics.md)
-- [production architecture](../../../10-production-ops/48-production-architecture.md)
+- [rate limits](../../../dev-surfaces/rate-limits.md)
+- [cost & unit economics](../../../production-ops/cost-unit-economics.md)
+- [production architecture](../../../production-ops/production-architecture.md)

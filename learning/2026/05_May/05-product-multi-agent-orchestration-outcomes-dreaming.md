@@ -27,4 +27,4 @@ This moves three things that teams used to build by hand — fan-out orchestrati
 - If you adopt Dreaming, review the consolidated memory it writes — stale-entry replacement and pattern-surfacing need human spot-checks.
 
 ## Connects to
-- [multi-agent](../../../06-agents/37-multi-agent.md) · [planning & orchestration](../../../06-agents/36-planning-orchestration.md) · [agent memory](../../../06-agents/35-agent-memory.md) · [agentic systems](../../../06-agents/34-agentic-systems.md)
+- [multi-agent](../../../agents/multi-agent.md) · [planning & orchestration](../../../agents/planning-orchestration.md) · [agent memory](../../../agents/agent-memory.md) · [agentic systems](../../../agents/agentic-systems.md)

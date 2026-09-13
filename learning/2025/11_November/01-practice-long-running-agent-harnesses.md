@@ -30,6 +30,6 @@ The context window is the wrong place to store long-horizon memory — it gets c
 - Make the agent verify through the real UI (browser automation), not by asserting success in prose.
 
 ## Connects to
-- [agent memory](../../../06-agents/35-agent-memory.md)
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [planning & orchestration](../../../06-agents/36-planning-orchestration.md)
+- [agent memory](../../../agents/agent-memory.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [planning & orchestration](../../../agents/planning-orchestration.md)

@@ -27,7 +27,7 @@ Agentic evals differ from static Q&A benchmarks: the model interacts with a live
 - Run repeated trials and watch for time-of-day drift; average over trials rather than reading a single run.
 
 ## Connects to
-- [evaluation methods](../../../09-evaluation/45-evaluation-methods.md)
-- [benchmarks](../../../09-evaluation/46-benchmarks.md)
-- [regression testing](../../../09-evaluation/47-regression-testing.md)
-- [observability](../../../10-production-ops/50-observability.md)
+- [evaluation methods](../../../evaluation/evaluation-methods.md)
+- [benchmarks](../../../evaluation/benchmarks.md)
+- [regression testing](../../../evaluation/regression-testing.md)
+- [observability](../../../production-ops/observability.md)

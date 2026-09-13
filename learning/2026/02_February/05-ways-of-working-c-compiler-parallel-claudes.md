@@ -29,8 +29,8 @@ This is the most concrete public evidence to date that "throw more parallel agen
 - Decompose big goals into independently verifiable units and assign specialized roles rather than cloning one generalist.
 
 ## Connects to
-- [multi-agent systems](../../../06-agents/37-multi-agent.md)
-- [planning & orchestration](../../../06-agents/36-planning-orchestration.md)
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [agent memory](../../../06-agents/35-agent-memory.md)
-- [evaluation methods](../../../09-evaluation/45-evaluation-methods.md)
+- [multi-agent systems](../../../agents/multi-agent.md)
+- [planning & orchestration](../../../agents/planning-orchestration.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [agent memory](../../../agents/agent-memory.md)
+- [evaluation methods](../../../evaluation/evaluation-methods.md)

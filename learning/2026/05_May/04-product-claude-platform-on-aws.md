@@ -28,4 +28,4 @@ Historically, "Claude on AWS" meant Bedrock, which lagged the native platform on
 - Run the data-boundary caveat past security/compliance before migrating regulated workloads; keep Bedrock where in-account processing is mandatory.
 
 ## Connects to
-- [build vs buy](../../../11-product-strategy/53-build-vs-buy.md) · [production architecture](../../../10-production-ops/48-production-architecture.md) · [API endpoint](../../../dev-surfaces/04-api-endpoint.md) · [AI security](../../../08-safety-trust/42-ai-security.md)
+- [build vs buy](../../../product-strategy/build-vs-buy.md) · [production architecture](../../../production-ops/production-architecture.md) · [API endpoint](../../../dev-surfaces/api-endpoint.md) · [AI security](../../../safety-trust/ai-security.md)

@@ -26,6 +26,6 @@ Moving Cowork off the desktop and onto remote-run web/mobile turns it from a mac
 - Try Cowork on web/mobile for a recurring, schedulable task to see the remote-execution model in practice.
 
 ## Connects to
-- [Agentic systems](../../../06-agents/34-agentic-systems.md)
-- [Tool calling](../../../06-agents/32-tool-calling.md)
-- [Guardrails](../../../08-safety-trust/41-guardrails.md)
+- [Agentic systems](../../../agents/agentic-systems.md)
+- [Tool calling](../../../agents/tool-calling.md)
+- [Guardrails](../../../safety-trust/guardrails.md)

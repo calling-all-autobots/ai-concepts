@@ -28,7 +28,7 @@ Frontier capability arriving at the *same* price as the prior Opus resets the co
 - Set an `effort` default per use case rather than accepting the model default everywhere.
 
 ## Connects to
-- [Reasoning models](../../../03-reasoning-generation/18-reasoning-models.md)
-- [Context windows](../../../01-foundations/05-context-windows.md)
-- [Cost / unit economics](../../../10-production-ops/51-cost-unit-economics.md)
-- [Model ID & versioning](../../../dev-surfaces/07-model-id-versioning.md)
+- [Reasoning models](../../../reasoning-generation/reasoning-models.md)
+- [Context windows](../../../foundations/context-windows.md)
+- [Cost / unit economics](../../../production-ops/cost-unit-economics.md)
+- [Model ID & versioning](../../../dev-surfaces/model-id-versioning.md)

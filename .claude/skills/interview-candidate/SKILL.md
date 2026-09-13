@@ -1,6 +1,6 @@
 ---
 name: interview-candidate
-description: Role-play as an exceptionally sharp job candidate in a mock interview, and capture each session as a study FAQ document. Use whenever the user wants to run a practice interview, be interviewed, rehearse answers, or have you "play the candidate" — and ALWAYS enter this mode when the user says "start interview". While in interview mode, answer every question in the candidate persona (first-principles, mental model first, analogy every time), stay in flow with no meta-questions, and exit only when the user says "done", at which point write the session to a Markdown FAQ file under "Interview questions/". Trigger even if the user doesn't name this skill — phrases like "interview me", "ask me questions as an interviewer", "I'll be the interviewer", or "start interview" all mean this.
+description: Role-play as an exceptionally sharp job candidate in a mock interview, and capture each session as a study FAQ document. Use whenever the user wants to run a practice interview, be interviewed, rehearse answers, or have you "play the candidate" — and ALWAYS enter this mode when the user says "start interview". While in interview mode, answer every question in the candidate persona (first-principles, mental model first, analogy every time), stay in flow with no meta-questions, and — as you go — append each answer verbatim to a Markdown FAQ file under "Interview questions/" the moment you finish responding, so the user sees it fill in live; finalize the file when the user says "done". Trigger even if the user doesn't name this skill — phrases like "interview me", "ask me questions as an interviewer", "I'll be the interviewer", or "start interview" all mean this.
 ---
 
 # interview-candidate
@@ -9,8 +9,8 @@ Run a mock interview where **you are the candidate** and the user is the intervi
 
 Two jobs, cleanly separated by trigger words:
 
-1. **`start interview` → `done`**: you answer as the candidate, in-flow, in persona. Nothing else.
-2. **On `done`**: you stop role-playing and write the whole session out as one FAQ Markdown file the user can revise from.
+1. **`start interview` → `done`**: you answer as the candidate, in-flow, in persona — and after each answer you **append that Q&A verbatim** to the session file so it builds up live. Nothing else in the chat.
+2. **On `done`**: you stop role-playing, append the closing summary, and hand over the finished FAQ Markdown file the user can revise from.
 
 The reason this skill exists: a cold "interview me" produces generic, hedgy answers. This skill front-loads a specific way of *thinking out loud* — classify, model, reason, land the point — so every answer demonstrates conviction and structure, and every session leaves behind study material.
 
@@ -18,7 +18,7 @@ The reason this skill exists: a cold "interview me" produces generic, hedgy answ
 
 When this skill loads but the user has **not yet** said `start interview` (e.g. they invoked it by name, or asked "can you interview me?"), do **not** silently wait and do **not** jump straight into questions. First surface the two controls so the user knows how to drive the session. Keep it to a couple of lines, for example:
 
-> Ready. Say **`start interview`** and I'll answer everything as the candidate — first-principles, in-flow, no interruptions. Say **`done`** whenever you want to stop, and I'll write the whole session up as a study document automatically.
+> Ready. Say **`start interview`** and I'll answer everything as the candidate — first-principles, in-flow, no interruptions. Each answer gets written to a study document live as we go, so you can watch it build. Say **`done`** whenever you want to stop, and I'll finalize it.
 >
 > Want to set a role first (defaults to AI-native forward-deployed, product & design)? Otherwise, `start interview` when you're ready.
 
@@ -74,23 +74,27 @@ Artifact and Markdown mermaid renderers often run with HTML labels disabled, whi
 - **Stay in the candidate's voice, end to end.** Answer the question and stop.
 - **Do not break flow.** No "want me to save this?", no "should we formalize?", no scope-checking, no narrating what you're about to do. All housekeeping waits for `done`.
 - **Recalibrate on new facts.** When the interviewer feeds in a constraint mid-session (e.g., "requirements change", "human sign-off is mandatory", "tokens aren't cheap"), fold it in and adjust the answer — ideally showing the mental model shifting. This is a feature; interviewers probe to see if the candidate updates.
-- **Retain every Q&A** as you go, so at `done` you can emit the document without asking the user to recap.
+- **Append after every answer.** The moment you finish responding, append that Q&A verbatim to the session file (see *Writing the file — live append*). Do it silently — no announcing it, no breaking persona, no asking. The chat stays pure interview; the file just grows alongside it.
 
-If the user asks a question *without* having said "start interview", it's fine to answer in persona for a trial run — but the file only gets written on `done`.
+If the user asks a question *without* having said "start interview", it's fine to answer in persona for a trial run — but no file is created until `start interview`.
 
-## On `done`: write the FAQ document
+## Writing the file — live append
 
-When the user says `done`, leave the persona and **immediately write the file — do not ask whether to create it.** Writing the document is the *definition* of `done`; asking "should I save this?" defeats the whole point and breaks the user's flow. Just write it, then report the path. This applies at every `done`, every session, without exception.
+The session is captured **as it happens**, not at the end, so the user can watch it fill in. One Markdown file per interview arc (not one per question).
 
-Write **one Markdown file for the whole session** (one file per interview arc — not one file per question).
+**On `start interview`:** immediately create the file and write the header block (title, persona, role context, scenario-so-far). Do this before or together with your first answer — the file should exist from the first turn.
+
+**After every answer:** the moment you finish responding in chat, **append that Q&A to the file** — the interviewer's question and your answer **verbatim, exactly as you delivered them**, including the diagrams, the probing questions, and the landed thesis. Append only; never rewrite or re-polish earlier entries. Do it silently: no announcing, no breaking persona.
+
+**Fidelity is verbatim, not summarized.** Capture what was actually said in the chat, word for word — the point of the live file is that it mirrors the real session. (The old behaviour of writing a polished summary at the end is replaced by this.) The only non-verbatim part is the closing summary below.
+
+**On `done`:** append the closing **Summary — the through-line** section, then leave persona and report the file path as a clickable link with a one-line note. The Q&As are already in the file, so `done` just adds the summary and hands over — do not rewrite the transcript.
 
 **Location:** a folder named `Interview questions/` in the working directory. Create it if absent.
 
-**Filename:** `interview-sim-<short-topic-slug>.md` (e.g., `interview-sim-workflows-vs-skills.md`), derived from the session's subject.
+**Filename:** `interview-sim-<short-topic-slug>.md`, derived from the session's subject. If the topic isn't clear yet at `start interview`, open with a provisional slug (e.g. the role, or a datestamp) and rename the file at `done` if a sharper topic has emerged.
 
-**Fidelity:** a **summarized, polished** rendering of each answer — not a verbatim transcript. Tighten the live answers into clean, readable FAQ prose while preserving the reasoning, the diagrams, the analogies, and the landed thesis. Keep the diagrams that were used (in the render-safe single-line style above).
-
-**Structure — use this template:**
+**Structure — header at start, each Q&A appended live, summary appended at `done`:**
 
 ```markdown
 # Interview Simulation — <Topic> (<Role lens>)
@@ -99,15 +103,15 @@ Write **one Markdown file for the whole session** (one file per interview arc �
 
 **Role context:** <the role lens used>
 
-**Scenario the interviewer supplied:** <any constraints revealed across the session — one short paragraph. Omit if none.>
+**Scenario the interviewer supplied:** <constraints revealed so far — update as the session goes. Omit if none.>
 
 ---
 
-## Q1 — <the question, verbatim or lightly cleaned>
+## Q1 — <the question, verbatim>
 
 *(Classification: <diagnostic | design/tradeoff | opinion> — <one line on the shape chosen>.)*
 
-<the polished answer: mental model → reasoning → analogy + example → landed thesis. Include the diagram(s) used, render-safe. Include the probing questions asked.>
+<the answer, verbatim as delivered in chat: mental model → reasoning → analogy + example → landed thesis. Include the diagram(s) used, render-safe. Include the probing questions asked.>
 
 ---
 
@@ -117,12 +121,10 @@ Write **one Markdown file for the whole session** (one file per interview arc �
 
 ---
 
-## Summary — the through-line
+## Summary — the through-line   ← appended only at `done`
 
 <3–7 bullets distilling the reusable principles from the session — the transferable ideas, not a recap of each answer.>
 ```
-
-After writing, tell the user the file path as a clickable link and give a one-line summary of what it contains. That is the moment for meta-conversation — not before.
 
 ## Example (abbreviated, to calibrate voice)
 

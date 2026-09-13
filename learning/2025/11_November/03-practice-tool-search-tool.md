@@ -31,6 +31,6 @@ As agents connect to dozens of MCP servers, tool definitions quietly become the 
 - For multi-tool research/data tasks, evaluate Programmatic Tool Calling so outputs are filtered in-sandbox before entering context.
 
 ## Connects to
-- [tool calling](../../../06-agents/32-tool-calling.md)
-- [MCP](../../../06-agents/33-mcp.md)
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
+- [tool calling](../../../agents/tool-calling.md)
+- [MCP](../../../agents/mcp.md)
+- [agentic systems](../../../agents/agentic-systems.md)

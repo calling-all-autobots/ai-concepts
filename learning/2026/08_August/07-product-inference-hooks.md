@@ -24,6 +24,6 @@ This hands enterprises a hard gate they control, in their own infrastructure, be
 - Track when response-side enforcement ships; until then, put sensitive-data controls on the prompt path.
 
 ## Connects to
-- [AI security](../../../08-safety-trust/42-ai-security.md)
-- [guardrails](../../../08-safety-trust/41-guardrails.md)
-- [privacy & PII](../../../08-safety-trust/43-privacy-pii.md)
+- [AI security](../../../safety-trust/ai-security.md)
+- [guardrails](../../../safety-trust/guardrails.md)
+- [privacy & PII](../../../safety-trust/privacy-pii.md)

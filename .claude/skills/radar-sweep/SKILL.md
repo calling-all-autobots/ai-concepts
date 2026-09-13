@@ -76,7 +76,7 @@ Each writer:
   using the anthropic-radar §5 format and bar (In one line / What actually
   changed / Why it matters / Your point of view / What to do / Connects to).
   A backfill month nugget is THREE levels below the repo root, so lesson links use
-  `../../../` (e.g. `../../../06-agents/33-mcp.md`),
+  `../../../` (e.g. `../../../agents/mcp.md`),
 - writes that month's `monthly-summary.md` — the living monthly newsletter:
   `# <Month Year> — Monthly Summary`, a `_last updated dd/mm/yyyy_` line, a
   `**This month:**` one-line narrative, then the ①②③ sections linking its nuggets

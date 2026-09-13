@@ -24,8 +24,8 @@ Sonnet is the workhorse tier — where most production traffic actually runs bec
 - If you use search grounding, adopt the GA web search/fetch tools rather than a bespoke scraper.
 
 ## Connects to
-- [context windows](../../../01-foundations/05-context-windows.md)
-- [retrieval](../../../04-retrieval-knowledge/24-retrieval.md)
-- [grounding & citations](../../../04-retrieval-knowledge/27-grounding-citations.md)
-- [build vs buy](../../../11-product-strategy/53-build-vs-buy.md)
-- [cost & unit economics](../../../10-production-ops/51-cost-unit-economics.md)
+- [context windows](../../../foundations/context-windows.md)
+- [retrieval](../../../retrieval-knowledge/retrieval.md)
+- [grounding & citations](../../../retrieval-knowledge/grounding-citations.md)
+- [build vs buy](../../../product-strategy/build-vs-buy.md)
+- [cost & unit economics](../../../production-ops/cost-unit-economics.md)

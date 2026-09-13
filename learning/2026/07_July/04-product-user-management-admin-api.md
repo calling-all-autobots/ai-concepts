@@ -29,6 +29,6 @@ Until now, moving people in and out of a Claude Enterprise org was largely conso
 - Track the header requirement: group/custom-role calls need `anthropic-beta: ce-user-management-2026-07-13` until these graduate from beta.
 
 ## Connects to
-- [Privacy & PII](../../../08-safety-trust/43-privacy-pii.md)
-- [API key](../../../dev-surfaces/05-api-key.md)
-- [Build vs buy](../../../11-product-strategy/53-build-vs-buy.md)
+- [Privacy & PII](../../../safety-trust/privacy-pii.md)
+- [API key](../../../dev-surfaces/api-key.md)
+- [Build vs buy](../../../product-strategy/build-vs-buy.md)

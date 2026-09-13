@@ -24,6 +24,6 @@ This is a version-pinning and dependency-hygiene lesson made concrete. A pinned 
 - Add an integration test that actually hits the API path, since import-time and unit tests won't catch these.
 
 ## Connects to
-- [SDK](../../../dev-surfaces/03-sdk.md)
-- [model ID & versioning](../../../dev-surfaces/07-model-id-versioning.md)
-- [sampling & decoding](../../../03-reasoning-generation/16-sampling-decoding.md)
+- [SDK](../../../dev-surfaces/sdk.md)
+- [model ID & versioning](../../../dev-surfaces/model-id-versioning.md)
+- [sampling & decoding](../../../reasoning-generation/sampling-decoding.md)

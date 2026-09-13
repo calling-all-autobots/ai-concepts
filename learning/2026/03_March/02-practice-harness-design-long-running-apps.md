@@ -23,7 +23,7 @@ This reframes agent building. The model is one component; reliability at the mul
 When building an app-building agent, split it into planner/generator/evaluator, wire the evaluator to a real browser-driver, define grading rubrics up front, and pass state through readable artifact files. Audit the harness at each model bump for components you can remove.
 
 ## Connects to
-- [multi-agent](../../../06-agents/37-multi-agent.md)
-- [planning & orchestration](../../../06-agents/36-planning-orchestration.md)
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [context windows](../../../01-foundations/05-context-windows.md)
+- [multi-agent](../../../agents/multi-agent.md)
+- [planning & orchestration](../../../agents/planning-orchestration.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [context windows](../../../foundations/context-windows.md)

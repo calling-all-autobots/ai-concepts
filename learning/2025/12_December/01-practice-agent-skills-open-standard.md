@@ -26,6 +26,6 @@ This is the MCP playbook applied to agent capabilities: don't build a moat, defi
 - If you're on Enterprise, plan for the new admin controls: who authors, who approves, which skills touch sensitive systems.
 
 ## Connects to
-- [MCP](../../../06-agents/33-mcp.md) — the sibling open standard (tools/data access) that Skills complement.
-- [Agentic systems](../../../06-agents/34-agentic-systems.md) — Skills are how you give an agent repeatable, specialized competence.
-- [Tool calling](../../../06-agents/32-tool-calling.md) — Skills often bundle scripts the agent runs, layered on top of tool use.
+- [MCP](../../../agents/mcp.md) — the sibling open standard (tools/data access) that Skills complement.
+- [Agentic systems](../../../agents/agentic-systems.md) — Skills are how you give an agent repeatable, specialized competence.
+- [Tool calling](../../../agents/tool-calling.md) — Skills often bundle scripts the agent runs, layered on top of tool use.

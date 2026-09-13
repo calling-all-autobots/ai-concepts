@@ -28,4 +28,4 @@ Permissioning is the hard, load-bearing part of shipping an autonomous agent, an
 4. **Review the policy like code** (ideally via [`ant apply`](02-ways-of-working-ant-apply.md)) so permission changes are versioned, not silent.
 
 ## Connects to
-[Agentic systems](../../../../06-agents/34-agentic-systems.md) · [Tool calling](../../../../06-agents/32-tool-calling.md) · [AI security](../../../../08-safety-trust/42-ai-security.md) · [Guardrails](../../../../08-safety-trust/41-guardrails.md) · [LLM observability](../../../../10-production-ops/50-observability.md)
+[Agentic systems](../../../../agents/agentic-systems.md) · [Tool calling](../../../../agents/tool-calling.md) · [AI security](../../../../safety-trust/ai-security.md) · [Guardrails](../../../../safety-trust/guardrails.md) · [LLM observability](../../../../production-ops/observability.md)

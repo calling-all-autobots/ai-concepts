@@ -36,6 +36,6 @@ This reframes MCP from "a menu of tools the model picks from" to "an API surface
 - Combine with `defer_loading` / Tool Search (Nov 24) so tool definitions are also discovered on demand.
 
 ## Connects to
-- [MCP](../../../06-agents/33-mcp.md)
-- [tool calling](../../../06-agents/32-tool-calling.md)
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
+- [MCP](../../../agents/mcp.md)
+- [tool calling](../../../agents/tool-calling.md)
+- [agentic systems](../../../agents/agentic-systems.md)

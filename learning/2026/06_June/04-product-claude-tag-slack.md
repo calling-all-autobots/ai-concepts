@@ -28,7 +28,7 @@ The design shift is from a private assistant to a *shared* teammate: state and t
 2. Migrate off the old per-user Claude in Slack app and set access controls up front.
 
 ## Connects to
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [multi-agent](../../../06-agents/37-multi-agent.md)
-- [agent memory](../../../06-agents/35-agent-memory.md)
-- [AI security](../../../08-safety-trust/42-ai-security.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [multi-agent](../../../agents/multi-agent.md)
+- [agent memory](../../../agents/agent-memory.md)
+- [AI security](../../../safety-trust/ai-security.md)

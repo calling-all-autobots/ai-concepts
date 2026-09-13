@@ -26,6 +26,6 @@ This is an organizational, not a technical, release — but it's a strong forwar
 - Nothing to integrate today — Labs itself ships no API; the action is watching what it emits.
 
 ## Connects to
-- [build vs buy](../../../11-product-strategy/53-build-vs-buy.md)
-- [AI product metrics](../../../11-product-strategy/52-ai-product-metrics.md)
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
+- [build vs buy](../../../product-strategy/build-vs-buy.md)
+- [AI product metrics](../../../product-strategy/ai-product-metrics.md)
+- [agentic systems](../../../agents/agentic-systems.md)

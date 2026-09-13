@@ -24,6 +24,6 @@ Read-only assistants summarize; write-capable assistants act, which is a categor
 - Treat memory + write-action combos as a security surface — audit what memories can influence side-effectful tools.
 
 ## Connects to
-- [agent memory](../../../06-agents/35-agent-memory.md)
-- [AI security](../../../08-safety-trust/42-ai-security.md)
-- [guardrails](../../../08-safety-trust/41-guardrails.md)
+- [agent memory](../../../agents/agent-memory.md)
+- [AI security](../../../safety-trust/ai-security.md)
+- [guardrails](../../../safety-trust/guardrails.md)

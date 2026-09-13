@@ -1,89 +1,89 @@
 # AI Concepts Syllabus — 59 topics, 12 categories
 
-Each line: global number, topic, and its lesson file path under `E:\ai-concepts`. **Ordering is dependency-clean** — within every category, a lesson only relies on earlier ones, so a newcomer never meets a term before it's taught. Write them in order by default; jump on request. Link related lessons across categories.
+Each line: topic and its lesson file path under `E:\ai-concepts`. **Lessons and folders carry no number** — reading order lives here and in the README ToC, and lessons are referred to **by title**. **Ordering is dependency-clean** — within every category, a lesson only relies on earlier ones, so a newcomer never meets a term before it's taught. Write them in order by default; jump on request. Link related lessons across categories.
 
-## 01-foundations
-1. Tokenization and tokens — `01-foundations/01-tokenization.md`
-2. Embeddings — `01-foundations/02-embeddings.md`
-3. Attention — `01-foundations/03-attention.md`
-4. Transformers — `01-foundations/04-transformers.md`
-5. Context windows — `01-foundations/05-context-windows.md`
-6. Pretraining vs. post-training — `01-foundations/06-pretraining-vs-posttraining.md`
+## Foundations
+1. Tokenization and tokens — `foundations/tokenization.md`
+2. Embeddings — `foundations/embeddings.md`
+3. Attention — `foundations/attention.md`
+4. Transformers — `foundations/transformers.md`
+5. Context windows — `foundations/context-windows.md`
+6. Pretraining vs. post-training — `foundations/pretraining-vs-posttraining.md`
 
-## 02-model-behavior-training
-7. Fine-tuning — `02-model-behavior-training/07-fine-tuning.md`
-8. PEFT — `02-model-behavior-training/08-peft.md`
-9. LoRA — `02-model-behavior-training/09-lora.md`
-10. Instruction tuning — `02-model-behavior-training/10-instruction-tuning.md`
-11. RLHF — `02-model-behavior-training/11-rlhf.md`
-12. DPO — `02-model-behavior-training/12-dpo.md`
-13. Distillation — `02-model-behavior-training/13-distillation.md`
-14. Quantization — `02-model-behavior-training/14-quantization.md`
-15. Mixture of Experts — `02-model-behavior-training/15-mixture-of-experts.md`
+## Model behavior and training
+1. Fine-tuning — `model-behavior-training/fine-tuning.md`
+2. PEFT — `model-behavior-training/peft.md`
+3. LoRA — `model-behavior-training/lora.md`
+4. Instruction tuning — `model-behavior-training/instruction-tuning.md`
+5. RLHF — `model-behavior-training/rlhf.md`
+6. DPO — `model-behavior-training/dpo.md`
+7. Distillation — `model-behavior-training/distillation.md`
+8. Quantization — `model-behavior-training/quantization.md`
+9. Mixture of Experts — `model-behavior-training/mixture-of-experts.md`
 
-## 03-reasoning-generation
-16. Sampling and decoding — `03-reasoning-generation/16-sampling-decoding.md`
-17. Chain-of-thought and extended thinking — `03-reasoning-generation/17-chain-of-thought.md`
-18. Reasoning models and test-time compute — `03-reasoning-generation/18-reasoning-models.md`
-19. Hallucination — `03-reasoning-generation/19-hallucination.md`
-20. Structured outputs — `03-reasoning-generation/20-structured-outputs.md`
+## Reasoning and generation
+1. Sampling and decoding — `reasoning-generation/sampling-decoding.md`
+2. Chain-of-thought and extended thinking — `reasoning-generation/chain-of-thought.md`
+3. Reasoning models and test-time compute — `reasoning-generation/reasoning-models.md`
+4. Hallucination — `reasoning-generation/hallucination.md`
+5. Structured outputs — `reasoning-generation/structured-outputs.md`
 
-## 04-retrieval-knowledge
-21. RAG — `04-retrieval-knowledge/21-rag.md`
-22. Chunking — `04-retrieval-knowledge/22-chunking.md`
-23. Vector databases — `04-retrieval-knowledge/23-vector-databases.md`
-24. Retrieval — `04-retrieval-knowledge/24-retrieval.md`
-25. Hybrid search — `04-retrieval-knowledge/25-hybrid-search.md`
-26. Reranking — `04-retrieval-knowledge/26-reranking.md`
-27. Grounding and citations — `04-retrieval-knowledge/27-grounding-citations.md`
+## Retrieval and knowledge (RAG stack)
+1. RAG — `retrieval-knowledge/rag.md`
+2. Chunking — `retrieval-knowledge/chunking.md`
+3. Vector databases — `retrieval-knowledge/vector-databases.md`
+4. Retrieval — `retrieval-knowledge/retrieval.md`
+5. Hybrid search — `retrieval-knowledge/hybrid-search.md`
+6. Reranking — `retrieval-knowledge/reranking.md`
+7. Grounding and citations — `retrieval-knowledge/grounding-citations.md`
 
-## 05-prompting
-28. Prompt engineering — `05-prompting/28-prompt-engineering.md`
-29. Few-shot and in-context learning — `05-prompting/29-few-shot-icl.md`
-30. KV caching — `05-prompting/30-kv-caching.md`
-31. Prompt caching — `05-prompting/31-prompt-caching.md`
+## Prompting
+1. Prompt engineering — `prompting/prompt-engineering.md`
+2. Few-shot and in-context learning — `prompting/few-shot-icl.md`
+3. KV caching — `prompting/kv-caching.md`
+4. Prompt caching — `prompting/prompt-caching.md`
 
-## 06-agents
-32. Tool calling / function calling — `06-agents/32-tool-calling.md`
-33. MCP (Model Context Protocol) — `06-agents/33-mcp.md`
-34. Agentic systems — `06-agents/34-agentic-systems.md`
-35. Agent memory — `06-agents/35-agent-memory.md`
-36. Planning and orchestration — `06-agents/36-planning-orchestration.md`
-37. Multi-agent architectures — `06-agents/37-multi-agent.md`
+## Agents
+1. Tool calling / function calling — `agents/tool-calling.md`
+2. MCP (Model Context Protocol) — `agents/mcp.md`
+3. Agentic systems — `agents/agentic-systems.md`
+4. Agent memory — `agents/agent-memory.md`
+5. Planning and orchestration — `agents/planning-orchestration.md`
+6. Multi-agent architectures — `agents/multi-agent.md`
 
-## 07-multimodal
-38. Vision-language models — `07-multimodal/38-vision-language.md`
-39. Audio and speech — `07-multimodal/39-audio-speech.md`
-40. Multimodal product surfaces — `07-multimodal/40-multimodal-products.md`
+## Multimodal
+1. Vision-language models — `multimodal/vision-language.md`
+2. Audio and speech — `multimodal/audio-speech.md`
+3. Multimodal product surfaces — `multimodal/multimodal-products.md`
 
-## 08-safety-trust
-41. Guardrails — `08-safety-trust/41-guardrails.md`
-42. AI security — `08-safety-trust/42-ai-security.md`
-43. Privacy and PII — `08-safety-trust/43-privacy-pii.md`
-44. Responsible AI — `08-safety-trust/44-responsible-ai.md`
+## Safety and trust
+1. Guardrails — `safety-trust/guardrails.md`
+2. AI security — `safety-trust/ai-security.md`
+3. Privacy and PII — `safety-trust/privacy-pii.md`
+4. Responsible AI — `safety-trust/responsible-ai.md`
 
-## 09-evaluation
-45. Evaluation methods — `09-evaluation/45-evaluation-methods.md`
-46. Benchmarks and their limits — `09-evaluation/46-benchmarks.md`
-47. Regression testing for prompts and models — `09-evaluation/47-regression-testing.md`
+## Evaluation
+1. Evaluation methods — `evaluation/evaluation-methods.md`
+2. Benchmarks and their limits — `evaluation/benchmarks.md`
+3. Regression testing for prompts and models — `evaluation/regression-testing.md`
 
-## 10-production-ops
-48. Production LLM architecture — `10-production-ops/48-production-architecture.md`
-49. Inference optimization — `10-production-ops/49-inference-optimization.md`
-50. LLM observability — `10-production-ops/50-observability.md`
-51. Cost and unit economics — `10-production-ops/51-cost-unit-economics.md`
+## Production and operations
+1. Production LLM architecture — `production-ops/production-architecture.md`
+2. Inference optimization — `production-ops/inference-optimization.md`
+3. LLM observability — `production-ops/observability.md`
+4. Cost and unit economics — `production-ops/cost-unit-economics.md`
 
-## 11-product-strategy
-52. AI product metrics — `11-product-strategy/52-ai-product-metrics.md`
-53. Build vs. buy — `11-product-strategy/53-build-vs-buy.md`
-54. Data moats and feedback loops — `11-product-strategy/54-data-moats.md`
-55. The iron triangle (cost / latency / quality) — `11-product-strategy/55-iron-triangle.md`
+## Product and strategy
+1. AI product metrics — `product-strategy/ai-product-metrics.md`
+2. Build vs. buy — `product-strategy/build-vs-buy.md`
+3. Data moats and feedback loops — `product-strategy/data-moats.md`
+4. The iron triangle (cost / latency / quality) — `product-strategy/iron-triangle.md`
 
-## 12-agent-engineering
-56. Tool design — `12-agent-engineering/56-tool-design.md`
-57. Harness engineering — `12-agent-engineering/57-harness-engineering.md`
-58. Loop engineering — `12-agent-engineering/58-loop-engineering.md`
-59. Memory architecture — `12-agent-engineering/59-memory-architecture.md`
+## Agent engineering
+1. Tool design — `agent-engineering/tool-design.md`
+2. Harness engineering — `agent-engineering/harness-engineering.md`
+3. Loop engineering — `agent-engineering/loop-engineering.md`
+4. Memory architecture — `agent-engineering/memory-architecture.md`
 
 ## What changed vs. the original order (dependency-clean reorder)
 - **Foundations:** tokens → embeddings → attention → transformers → context windows → pretraining (was transformers-first, which forward-referenced tokens/embeddings).
@@ -93,4 +93,4 @@ Each line: global number, topic, and its lesson file path under `E:\ai-concepts`
 - **Prompting:** prompt engineering → few-shot → KV caching (mechanism) → prompt caching (the productized feature built on it).
 - **Agents:** tool calling → MCP → agentic systems → agent memory → planning → multi-agent (primitive → standard → loop → state → planning → many agents).
 - Categories 7–11 were already dependency-clean; order unchanged.
-- **Agent engineering (new, 12):** the "how you wield the model" cluster — tool design (craft on top of #32 tool calling) → harness engineering (the scaffolding that runs the agent) → loop engineering (control flow inside the harness) → memory architecture (systems-level state design, building on #35 agent memory). Placed as its own category so the four are studied together rather than scattered through 06-agents.
+- **Agent engineering (new, 12th category):** the "how you wield the model" cluster — tool design (craft on top of tool calling) → harness engineering (the scaffolding that runs the agent) → loop engineering (control flow inside the harness) → memory architecture (systems-level state design, building on agent memory). Placed as its own category so the four are studied together rather than scattered through the agents category.

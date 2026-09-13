@@ -27,6 +27,6 @@ These are the plumbing pieces that move Managed Agents from "runnable" to "opera
 - Use `initial_events` to seed sessions with context + a defined outcome and save the extra round trip.
 
 ## Connects to
-- [Agentic systems](../../../06-agents/34-agentic-systems.md)
-- [Planning & orchestration](../../../06-agents/36-planning-orchestration.md)
-- [Observability](../../../10-production-ops/50-observability.md)
+- [Agentic systems](../../../agents/agentic-systems.md)
+- [Planning & orchestration](../../../agents/planning-orchestration.md)
+- [Observability](../../../production-ops/observability.md)

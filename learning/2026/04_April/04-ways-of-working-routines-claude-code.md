@@ -24,6 +24,6 @@ This turns Claude Code from an interactive, laptop-bound tool into standing, una
 - Track it against your plan's daily routine cap and prune ones that stop earning their slot.
 
 ## Connects to
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
+- [agentic systems](../../../agents/agentic-systems.md)
 - [dev surfaces](../../../dev-surfaces/)
-- [production architecture](../../../10-production-ops/48-production-architecture.md)
+- [production architecture](../../../production-ops/production-architecture.md)

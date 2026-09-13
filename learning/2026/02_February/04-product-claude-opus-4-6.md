@@ -30,8 +30,8 @@ Two structural shifts. First, `effort` turns reasoning depth into a first-class,
 - Use fast mode (Feb 7) for latency-sensitive paths where you still want Opus quality.
 
 ## Connects to
-- [reasoning models](../../../03-reasoning-generation/18-reasoning-models.md)
-- [chain of thought](../../../03-reasoning-generation/17-chain-of-thought.md)
-- [context windows](../../../01-foundations/05-context-windows.md)
-- [cost & unit economics](../../../10-production-ops/51-cost-unit-economics.md)
-- [benchmarks](../../../09-evaluation/46-benchmarks.md)
+- [reasoning models](../../../reasoning-generation/reasoning-models.md)
+- [chain of thought](../../../reasoning-generation/chain-of-thought.md)
+- [context windows](../../../foundations/context-windows.md)
+- [cost & unit economics](../../../production-ops/cost-unit-economics.md)
+- [benchmarks](../../../evaluation/benchmarks.md)

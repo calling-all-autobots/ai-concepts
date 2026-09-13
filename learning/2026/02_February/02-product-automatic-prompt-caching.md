@@ -26,7 +26,7 @@ Manual breakpoint placement was a real source of "why is my cache not hitting" b
 - Audit code and jobs for retired model IDs (`claude-3-7-sonnet*`, `claude-3-5-haiku*`) and repoint them.
 
 ## Connects to
-- [prompt caching](../../../05-prompting/31-prompt-caching.md)
-- [KV caching](../../../05-prompting/30-kv-caching.md)
-- [cost & unit economics](../../../10-production-ops/51-cost-unit-economics.md)
-- [model ID & versioning](../../../dev-surfaces/07-model-id-versioning.md)
+- [prompt caching](../../../prompting/prompt-caching.md)
+- [KV caching](../../../prompting/kv-caching.md)
+- [cost & unit economics](../../../production-ops/cost-unit-economics.md)
+- [model ID & versioning](../../../dev-surfaces/model-id-versioning.md)

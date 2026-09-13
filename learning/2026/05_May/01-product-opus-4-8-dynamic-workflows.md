@@ -27,5 +27,5 @@ This is the item you lost track of. Dynamic Workflows is a step change in *orche
 - Set effort deliberately (`high`/`xhigh`/`max`) per workload rather than accepting the default everywhere.
 
 ## Connects to
-- [multi-agent](../../../06-agents/37-multi-agent.md) · [planning & orchestration](../../../06-agents/36-planning-orchestration.md) · [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [context windows](../../../01-foundations/05-context-windows.md) · [reasoning models](../../../03-reasoning-generation/18-reasoning-models.md) · [cost & unit economics](../../../10-production-ops/51-cost-unit-economics.md)
+- [multi-agent](../../../agents/multi-agent.md) · [planning & orchestration](../../../agents/planning-orchestration.md) · [agentic systems](../../../agents/agentic-systems.md)
+- [context windows](../../../foundations/context-windows.md) · [reasoning models](../../../reasoning-generation/reasoning-models.md) · [cost & unit economics](../../../production-ops/cost-unit-economics.md)

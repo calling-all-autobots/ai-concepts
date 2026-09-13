@@ -24,6 +24,6 @@ Long-horizon agents are only as useful as what they remember between runs. Befor
 - Watch for GA and any pricing that attaches to memory storage before betting production on it.
 
 ## Connects to
-- [agent memory](../../../06-agents/35-agent-memory.md)
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [production architecture](../../../10-production-ops/48-production-architecture.md)
+- [agent memory](../../../agents/agent-memory.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [production architecture](../../../production-ops/production-architecture.md)

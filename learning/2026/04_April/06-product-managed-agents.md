@@ -28,6 +28,6 @@ Managed Agents removes the hardest, most undifferentiated parts of shipping an a
 - Budget for the session-hour charge in any always-on scenario before committing production traffic.
 
 ## Connects to
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [agent memory](../../../06-agents/35-agent-memory.md)
-- [production architecture](../../../10-production-ops/48-production-architecture.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [agent memory](../../../agents/agent-memory.md)
+- [production architecture](../../../production-ops/production-architecture.md)

@@ -26,6 +26,6 @@ This moves agentic coding to where the bug is actually reported. The friction of
 - Set a team norm for which channels can invoke it and who approves the resulting PRs, since it can read channel history to build the task.
 
 ## Connects to
-- [Agentic systems](../../../06-agents/34-agentic-systems.md) — a delegated, tool-using agent running an end-to-end task loop.
-- [Tool calling](../../../06-agents/32-tool-calling.md) — the file/shell tools the Slack-triggered session runs on.
-- [SDK / dev surfaces](../../../dev-surfaces/03-sdk.md) — another surface in Claude Code's expanding footprint (terminal, IDE, web, chat).
+- [Agentic systems](../../../agents/agentic-systems.md) — a delegated, tool-using agent running an end-to-end task loop.
+- [Tool calling](../../../agents/tool-calling.md) — the file/shell tools the Slack-triggered session runs on.
+- [SDK / dev surfaces](../../../dev-surfaces/sdk.md) — another surface in Claude Code's expanding footprint (terminal, IDE, web, chat).

@@ -29,4 +29,4 @@ As agents get autonomous enough to run migrations and control machines, "the mod
 - Re-scope egress allowlists as capability grants; assume any reachable API on an allowed domain is exploitable.
 
 ## Connects to
-- [AI security](../../../08-safety-trust/42-ai-security.md) · [guardrails](../../../08-safety-trust/41-guardrails.md) · [agentic systems](../../../06-agents/34-agentic-systems.md) · [MCP](../../../06-agents/33-mcp.md)
+- [AI security](../../../safety-trust/ai-security.md) · [guardrails](../../../safety-trust/guardrails.md) · [agentic systems](../../../agents/agentic-systems.md) · [MCP](../../../agents/mcp.md)

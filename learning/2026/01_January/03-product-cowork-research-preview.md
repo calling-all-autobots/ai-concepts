@@ -29,7 +29,7 @@ Cowork is Anthropic pushing its agent stack out of the developer niche into gene
 - Update any bookmarks/integration docs pointing at console.anthropic.com to platform.claude.com.
 
 ## Connects to
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [planning & orchestration](../../../06-agents/36-planning-orchestration.md)
-- [console / dashboard](../../../dev-surfaces/02-console-dashboard.md)
-- [build vs buy](../../../11-product-strategy/53-build-vs-buy.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [planning & orchestration](../../../agents/planning-orchestration.md)
+- [console / dashboard](../../../dev-surfaces/console-dashboard.md)
+- [build vs buy](../../../product-strategy/build-vs-buy.md)

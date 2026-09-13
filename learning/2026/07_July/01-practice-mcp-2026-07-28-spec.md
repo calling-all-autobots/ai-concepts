@@ -29,6 +29,6 @@ The old stateful model forced sticky sessions and per-connection state — awkwa
 - Re-deploy stateless servers on serverless/edge to cut idle cost.
 
 ## Connects to
-- [MCP](../../../06-agents/33-mcp.md)
-- [AI security](../../../08-safety-trust/42-ai-security.md)
-- [SDK](../../../dev-surfaces/03-sdk.md)
+- [MCP](../../../agents/mcp.md)
+- [AI security](../../../safety-trust/ai-security.md)
+- [SDK](../../../dev-surfaces/sdk.md)

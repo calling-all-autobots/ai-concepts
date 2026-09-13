@@ -24,6 +24,6 @@ Skills and plugins are executable code and instructions that enter the agent's c
 - Maintain an allowlist of vetted skills/plugins for sensitive workspaces rather than open install.
 
 ## Connects to
-- [AI security](../../../08-safety-trust/42-ai-security.md)
-- [guardrails](../../../08-safety-trust/41-guardrails.md)
-- [MCP](../../../06-agents/33-mcp.md)
+- [AI security](../../../safety-trust/ai-security.md)
+- [guardrails](../../../safety-trust/guardrails.md)
+- [MCP](../../../agents/mcp.md)

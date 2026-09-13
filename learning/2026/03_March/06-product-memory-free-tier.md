@@ -22,7 +22,7 @@ Memory is a retention and stickiness mechanism, not just a convenience: an assis
 If you build consumer AI, study this as a template for memory as an acquisition-and-retention lever and for where to draw the free/paid boundary. As a user, know that free Claude now persists personal context across chats — mind what you share, and use the memory controls to review or clear it.
 
 ## Connects to
-- [agent memory](../../../06-agents/35-agent-memory.md)
-- [privacy & PII](../../../08-safety-trust/43-privacy-pii.md)
-- [AI product metrics](../../../11-product-strategy/52-ai-product-metrics.md)
-- [data moats](../../../11-product-strategy/54-data-moats.md)
+- [agent memory](../../../agents/agent-memory.md)
+- [privacy & PII](../../../safety-trust/privacy-pii.md)
+- [AI product metrics](../../../product-strategy/ai-product-metrics.md)
+- [data moats](../../../product-strategy/data-moats.md)

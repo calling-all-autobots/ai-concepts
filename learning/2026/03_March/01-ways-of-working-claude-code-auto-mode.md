@@ -22,6 +22,6 @@ The real hazard of the old model was approval fatigue: when Claude asks for the 
 Use auto mode for long, well-scoped tasks inside a git working tree you can revert; keep `--dangerously-skip-permissions` only for disposable containers. Never point either at production credentials or a directory with secrets. For teams, set the managed-settings default and document when each mode is appropriate.
 
 ## Connects to
-- [agentic systems](../../../06-agents/34-agentic-systems.md)
-- [guardrails](../../../08-safety-trust/41-guardrails.md)
-- [AI security](../../../08-safety-trust/42-ai-security.md)
+- [agentic systems](../../../agents/agentic-systems.md)
+- [guardrails](../../../safety-trust/guardrails.md)
+- [AI security](../../../safety-trust/ai-security.md)

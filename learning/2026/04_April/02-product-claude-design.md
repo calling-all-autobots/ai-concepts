@@ -24,5 +24,5 @@ This is Anthropic moving from "model + API" toward finished end-user products in
 - Treat outputs as drafts to refine, and keep a real design review in the loop for anything customer-facing.
 
 ## Connects to
-- [multimodal foundations](../../../07-multimodal/)
-- [product strategy](../../../11-product-strategy/)
+- [multimodal foundations](../../../multimodal/)
+- [product strategy](../../../product-strategy/)
